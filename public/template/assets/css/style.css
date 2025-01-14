@@ -118,13 +118,13 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background-color: #d8730e;
+  background-color: transparent;
 }
 
 #header.header-scrolled {
   /* background: rgba(1, 4, 136, 0.9); */
   /* background: #4a184e; */
-  background-color: #a8590b;
+  background-color: #2a2a2a;
   height: 90px;
 }
 
@@ -238,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   font-weight: 500;
   text-transform: none;
-  color: #01036f;
+  color: #2a2a2a;
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
@@ -397,7 +397,8 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  background: url("../img/hero-bg.jpg");
+  background: url("../img/BCG.jpg");
+  background-size: cover;
   position: relative;
   padding: 120px 0 0 0;
 }
@@ -406,7 +407,7 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   /* background: rgba(2, 5, 161, 0.91); */
   /* background: #571C5C; */
-  background-color: #d8730e;
+  /* background-color: #2a2a2a; */
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1464,7 +1465,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #010351;
+  background: #2a2a2a;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -1476,7 +1477,7 @@ section {
 
 #footer .footer-top .footer-info {
   margin-bottom: 15px;
-  background: #010246;
+  background: #2a2a2a;
   color: #fff;
   border-top: 4px solid #1acc8d;
   text-align: center;
@@ -1598,7 +1599,7 @@ section {
 }
 
 #footer .copyright {
-  border-top: 1px solid #010479;
+  border-top: 1px solid #1acc8d;
   text-align: center;
   padding-top: 30px;
 }
