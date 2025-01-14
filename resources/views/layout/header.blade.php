@@ -52,9 +52,9 @@ $nav_profil           = $myproduk->nav_profil();
               </ul>
             </li>
             <li><a href="{{ asset('kontak') }}">Kontak</a></li>
-              <li>
+              <!-- <li>
                   <a href="{{ asset('pemesanan') }}" class="orange" title="Form Pemesanan"><div class="belanja"><i class="fa fa-shopping-cart"></i> Form Order</div></a>
-              </li>
+              </li> -->
                      
             
         </ul>

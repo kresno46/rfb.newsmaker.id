@@ -166,7 +166,7 @@
           <div class="col-md-12">
             <hr>
             <p class="text-center">
-              <a href="{{ asset('berita') }}" class="btn btn-info"><i class="fa fa-newspaper"></i> Lihat berita lainnya...</a>
+              <a href="{{ asset('berita') }}" class="btn btn-success btn-smspaper"></i> Lihat berita lainnya...</a>
             </p>
             
           </div>

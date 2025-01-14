@@ -22,7 +22,7 @@ $site = DB::table('konfigurasi')->first();
   <!-- sweetalert -->
   <script src="{{ asset('public/sweetalert/js/sweetalert.min.js') }}"></script>
   <link rel="stylesheet" type="text/css" href="{{ asset('public/sweetalert/css/sweetalert.css') }}">
-  <style type="text/css" media="screen">
+  <!-- <style type="text/css" media="screen">
     .bg-login-image, .bg-register-image, .bg-password-image {
       background: url("{{ asset('public/upload/image/'.$site->gambar) }}");
       -webkit-background-size: cover;
@@ -30,7 +30,7 @@ $site = DB::table('konfigurasi')->first();
       -o-background-size: cover;
       background-size: cover;
     }
-  </style>
+  </style> -->
 </head>
 
 <body class="bg-gradient-primary">
