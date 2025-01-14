@@ -48,11 +48,11 @@
 
         <div class="row">
           <div class="col-xl-4 col-lg-6 d-flex justify-content-center align-items-stretch" data-aos="fade-right">
-            <img src="{{ asset('public/upload/image/'.$site->icon) }}" alt="{{ $site->namaweb }}" class="img img-fluid img-thumbnail">
+            <!-- <img src="{{ asset('public/upload/image/'.$site->icon) }}" alt="{{ $site->namaweb }}" class="img img-fluid img-thumbnail"> -->
           </div>
 
           <div class="col-xl-8 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
-            <h3>Selamat datang di {{ $site->namaweb }}</h3>
+            <h3>Welcome to Rifan Financial Berjangka website</h3>
             <?php echo $site->tentang ?>
 
           </div>
