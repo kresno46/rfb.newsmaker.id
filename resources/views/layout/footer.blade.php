@@ -78,14 +78,14 @@ $site       = DB::table('konfigurasi')->first();
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('/') }}">Beranda</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('produk') }}">Lihat Produk</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('pemesanan') }}">Pemesanan Produk</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('pembayaran') }}">Cara Pembayaran</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('pemesanan') }}">Pemesanan Produk</a></li> -->
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('pembayaran') }}">Cara Pembayaran</a></li> -->
               <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('kontak') }}">Kontak</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Pemesanan</h4>
+            <!-- <h4>Pemesanan</h4> -->
             <p>
               <strong><?php echo strtoupper($site->namaweb) ?></strong>
               <br><?php echo nl2br($site->alamat) ?>
@@ -105,9 +105,9 @@ $site       = DB::table('konfigurasi')->first();
       <div class="copyright">
         &copy; Copyright <strong><span><?php echo $site->namaweb ?></span></strong>. All Rights Reserved
       </div>
-      <div class="credits">
+      <!-- <div class="credits">
         Developed by <a href="https://javawebmedia.com/">Java Web Media</a>
-      </div>
+      </div> -->
     </div>
   </footer><!-- End Footer -->
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>

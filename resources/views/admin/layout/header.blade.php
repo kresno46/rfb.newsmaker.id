@@ -55,13 +55,13 @@ $site                 = DB::table('konfigurasi')->first();
       </li>
 
       <!-- TRANSAKSI -->
-      <hr class="sidebar-divider">
+      <!-- <hr class="sidebar-divider">
       <div class="sidebar-heading">Order &amp; Pemesanan</div>
       <hr class="sidebar-divider">
       <li class="nav-item">
         <a class="nav-link" href="{{ asset('admin/pemesanan') }}">
           <i class="fas fa-fw fa-money-bill-alt"></i> <span>Pemesanan</span></a>
-      </li>
+      </li> -->
       <!-- PRODUK -->
       <hr class="sidebar-divider">
       <div class="sidebar-heading">Produk &amp; Layanan</div>

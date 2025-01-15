@@ -69,7 +69,6 @@
   <div class="container">
     <div class="col-xl-12 col-lg-12 col-md-12 text-center" data-aos="fade-up">
           <h2>Produk <?php $site->namaweb ?></h2>
-          <p><?php echo $site->deskripsi ?></p>
           <br><br>
     </div>
         <!-- START -->
@@ -89,15 +88,15 @@
                           <?php  echo $produk->nama_produk ?>
                         </a>
                       </h3>
-                    <p class="harga">Rp <?php echo $produk->harga_jual; ?></p>
+                    <p class="harga"> <?php echo $produk->harga_jual; ?></p>
                   </div>
                   <div class="link-produk">
                     <p>
                       <input type="hidden" name="quantity" id="{{ $produk->id_produk }}" value="1" class="quantity">
                       <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Detail</a>
-                        <a href="{{ asset('pemesanan?id_produk='.$produk->id_produk) }}" class="btn btn-info btn-sm">
+                        <!-- <a href="{{ asset('pemesanan?id_produk='.$produk->id_produk) }}" class="btn btn-info btn-sm">
                           <i class="fa fa-shopping-cart"></i> Pesan Produk Ini
-                        </a>
+                        </a> -->
                     </p>
                 </div>
             </div>
