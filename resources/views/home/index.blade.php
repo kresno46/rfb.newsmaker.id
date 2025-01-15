@@ -68,7 +68,7 @@
       
   <div class="container">
     <div class="col-xl-12 col-lg-12 col-md-12 text-center" data-aos="fade-up">
-          <h2>Produk <?php $site->namaweb ?></h2>
+          <h2>Produk Kami<?php $site->namaweb ?></h2>
           <br><br>
     </div>
         <!-- START -->

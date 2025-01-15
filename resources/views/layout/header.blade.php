@@ -47,7 +47,7 @@ $nav_profil           = $myproduk->nav_profil();
               <ul>
                 
                 <li><a href="{{ asset('video') }}">Video Youtube</a></li>
-                <li><a href="{{ asset('galeri') }}">Galeri Gambar</a></li>
+                <li><a href="{{ asset('galeri') }}">Legalitas</a></li>
                 <li><a href="{{ asset('download') }}">Unduh File</a></li>
               </ul>
             </li>
