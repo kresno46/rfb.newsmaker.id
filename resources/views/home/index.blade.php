@@ -77,29 +77,30 @@
             if($produks) {
             foreach($produks as $produk) { ?>
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4 produk text-center">
-                  <figure class="thumnail">
-                    <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}">
-                      <img src="{{ asset('public/upload/image/'.$produk->gambar) }}" alt="<?php  echo $produk->nama_produk ?>" class="img-fluid img-thumbnail">
-                    </a>
-                  </figure>
-                  <div class="keterangan">
-                      <h3>
-                        <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}">
-                          <?php  echo $produk->nama_produk ?>
-                        </a>
-                      </h3>
-                    <p class="harga"> <?php echo $produk->harga_jual; ?></p>
-                  </div>
-                  <div class="link-produk">
-                    <p>
+              <figure class="thumnail">
+                  <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}">
+                      <img src="{{ asset('public/upload/image/'.$produk->gambar) }}" alt="{{ $produk->nama_produk }}" class="img-fluid img-thumbnail">
+                  </a>
+              </figure>
+              <div class="keterangan" style="min-height: 120px; display: flex; flex-direction: column; justify-content: space-between;">
+                  <h3>
+                      <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}">
+                          <?php echo $produk->nama_produk ?>
+                      </a>
+                  </h3>
+                  <p class="harga"> <?php echo $produk->harga_jual; ?></p>
+              </div>
+              <div class="link-produk">
+                  <p>
                       <input type="hidden" name="quantity" id="{{ $produk->id_produk }}" value="1" class="quantity">
                       <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Detail</a>
-                        <!-- <a href="{{ asset('pemesanan?id_produk='.$produk->id_produk) }}" class="btn btn-info btn-sm">
+                      <!-- <a href="{{ asset('pemesanan?id_produk='.$produk->id_produk) }}" class="btn btn-info btn-sm">
                           <i class="fa fa-shopping-cart"></i> Pesan Produk Ini
-                        </a> -->
-                    </p>
-                </div>
-            </div>
+                      </a> -->
+                  </p>
+              </div>
+          </div>
+
             
           <?php } ?>
           <div class="clearfix"></div>
