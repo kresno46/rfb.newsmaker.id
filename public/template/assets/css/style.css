@@ -118,13 +118,13 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background-color: #000000;
+  background-color: transparent;
 }
 
 #header.header-scrolled {
   /* background: rgba(1, 4, 136, 0.9); */
   /* background: #4a184e; */
-  background-color: #000000;
+  background-color: #2a2a2a;
   height: 90px;
 }
 
@@ -238,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   font-weight: 500;
   text-transform: none;
-  color: #01036f;
+  color: #2a2a2a;
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
@@ -405,9 +405,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero:before {
   content: "";
-  /* background: rgba(2, 5, 161, 0.91);
-  background: #571C5C;
-  background-color: #2f2f2f; */
+  /* background: rgba(2, 5, 161, 0.91); */
+  /* background: #571C5C; */
+  /* background-color: #2a2a2a; */
   position: absolute;
   bottom: 0;
   top: 0;
@@ -421,12 +421,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   line-height: 56px;
   /* color: rgba(255, 255, 255, 0.8); */
-  color: #000000;
+  color: white;
 }
 
 #hero h1 span {
-  color: #000000;
-  border-bottom: 4px solid #2f2f2f;
+  color: white;
+  border-bottom: 4px solid #28a745;
 }
 
 #hero h2 {

@@ -52,7 +52,7 @@
           </div>
 
           <div class="col-xl-8 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
-            <h3>Selamat datang di {{ $site->namaweb }}</h3>
+            <h3>Selamat Datang di Rifan Financindo Berjangka</h3>
             <?php echo $site->tentang ?>
 
           </div>
@@ -68,7 +68,7 @@
       
   <div class="container">
     <div class="col-xl-12 col-lg-12 col-md-12 text-center" data-aos="fade-up">
-          <h2>Produk <?php $site->namaweb ?></h2>
+          <h2>Produk Kami<?php $site->namaweb ?></h2>
           <br><br>
     </div>
         <!-- START -->
@@ -125,7 +125,7 @@
       <div class="container">
 
         <div class="section-title text-center" data-aos="fade-up">
-          <h2>Berita terbaru</h2>
+          <h2>Berita Terbaru</h2>
           <p><?php echo $site->namaweb ?></p>
         </div>
 
