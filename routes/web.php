@@ -144,7 +144,7 @@ function()
     Route::get('admin/produk/tambah', 'Produk@tambah');
     Route::get('admin/produk/edit/{par1}', 'Produk@edit');
     Route::get('admin/produk/delete/{par1}', 'Produk@delete');
-    Route::post('admin/produk/tambah_proses', 'Produk@tambah_proses');
+    Route::post('admin/produk/tambah_proses', 'Produk@tambah_proses'); 
     Route::post('admin/produk/edit_proses', 'Produk@edit_proses');
     Route::post('admin/produk/proses', 'Produk@proses');
     // galeri

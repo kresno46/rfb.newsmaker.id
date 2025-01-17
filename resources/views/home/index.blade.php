@@ -76,7 +76,7 @@
       <?php  
             if($produks) {
             foreach($produks as $produk) { ?>
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4 produk text-center">
+            <div class="col-lg-3 col-md-6 col-sm-10 mb-4 produk text-center">
                   <figure class="thumnail">
                     <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}">
                       <img src="{{ asset('public/upload/image/'.$produk->gambar) }}" alt="<?php  echo $produk->nama_produk ?>" class="img-fluid img-thumbnail">

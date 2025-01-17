@@ -27,16 +27,16 @@
                           <?php  echo $produk->nama_produk ?>
                         </a>
                       </h3>
-                    <p class="harga">Rp <?php echo number_format($produk->harga_jual,'0',',','.'); ?></p>
+                    
                   </div>
                   <div class="link-produk">
-                    <p>
+                    <!-- <p>
                       <input type="hidden" name="quantity" id="<?php echo $produk->id_produk;?>" value="1" class="quantity">
                       <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Detail</a>
                         <a href="{{ asset('pemesanan?id_produk='.$produk->id_produk) }}" class="btn btn-info btn-sm">
                           <i class="fa fa-shopping-cart"></i> Pesan Produk Ini
                         </a>
-                    </p>
+                    </p> -->
                 </div>
             </div>
           <?php }}else{ ?>
