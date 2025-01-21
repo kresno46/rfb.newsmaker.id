@@ -25,7 +25,7 @@ $nav_profil           = $myproduk->nav_profil();
         <ul>
           
             <li class="active"><a href="{{ asset('/') }}">Beranda</a></li>
-            <li class="drop-down"><a href="{{ asset('/') }}">Berita</a>
+            <li class="drop-down"><a href="#">Berita</a>
               <ul>
                 <li><a href="https://www.rfbnews.com/index.php/en/economic-news/economy">Economy</a></li>
                 <li><a href="https://www.rfbnews.com/index.php/en/economic-news/fiscal-moneter">Fiscal & Moneter</a></li>
@@ -39,8 +39,9 @@ $nav_profil           = $myproduk->nav_profil();
               <ul>
                 <?php foreach($nav_profil as $nav_profil) { ?>
                 <li><a href="{{ asset('berita/read/'.$nav_profil->slug_berita) }}"><?php echo $nav_profil->judul_berita ?></a></li>
-                <li><a href="{{ asset('galeri') }}">Legalitas</a></li>
                 <li><a href="#">Penghargaan</a></li>
+                <li><a href="{{ asset('galeri') }}">Legalitas Bisnis</a></li>
+                <li><a href="{{ asset('berita/read/'.$nav_profil->slug_berita) }}">Visi dan Misi</a></li>
                 <?php } ?>
               </ul>
             </li>
@@ -57,10 +58,10 @@ $nav_profil           = $myproduk->nav_profil();
             <li class="drop-down"><a href="#">Info & Aktivitas</a>
               <ul>
                 
-                <li><a href="{{ asset('video') }}">Video Youtube</a></li>
+                <li><a href="{{ asset('berita') }}">Aktivitas</a></li>
                 <!-- <li><a href="{{ asset('galeri') }}">Legalitas</a></li> -->
-                 <li><a href="{{ asset('berita') }}">Aktivitas</a></li>
-                <li><a href="{{ asset('download') }}">Unduh File</a></li>
+                <li><a href="{{ asset('video') }}">Video Youtube</a></li>
+                <!-- <li><a href="{{ asset('download') }}">Unduh File</a></li> -->
               </ul>
             </li>
             <li><a href="{{ asset('kontak') }}">Kontak</a></li>
