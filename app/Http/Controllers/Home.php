@@ -161,6 +161,9 @@ class Home extends Controller
         
     }
 
+    //VisiMisi
+    
+
     // konfirmasi
     public function konfirmasi()
     {

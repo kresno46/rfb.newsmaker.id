@@ -41,7 +41,7 @@ $nav_profil           = $myproduk->nav_profil();
                 <li><a href="{{ asset('berita/read/'.$nav_profil->slug_berita) }}"><?php echo $nav_profil->judul_berita ?></a></li>
                 <li><a href="#">Penghargaan</a></li>
                 <li><a href="{{ asset('galeri') }}">Legalitas Bisnis</a></li>
-                <li><a href="{{ asset('berita/read/'.$nav_profil->slug_berita) }}">Visi dan Misi</a></li>
+                <!-- <li><a href="{{ asset('visi-misi') }}">Visi Misi</a></li> -->
                 <?php } ?>
               </ul>
             </li>
