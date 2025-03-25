@@ -16,7 +16,7 @@
                 <br><?php echo nl2br($site->alamat) ?>
                 <br>Telepon: <?php echo $site->telepon ?>
                 <br>Email: <?php echo $site->email ?>
-                <br>Website: <?php echo $site->website ?>
+                <br>Layanan pengaduan: <?php echo $site->email ?>
               </p>
             </div>
             <div class="col-md-8">

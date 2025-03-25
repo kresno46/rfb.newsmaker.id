@@ -81,10 +81,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    @lang('home.laravel')
                 </div>
-
+                
                 <div class="links">
+                    <a href="locale/id">ID</a>
+                    <a href="locale/en">EN</a>
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>

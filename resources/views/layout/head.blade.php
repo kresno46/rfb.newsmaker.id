@@ -10,7 +10,7 @@ $site = DB::table('konfigurasi')->first();
     <meta name="keywords" content="{{ $keywords }}">
     <meta name="author" content="{{ $site->namaweb }}">
     <!-- icon -->
-    <!-- <link rel="shortcut icon" href="{{ asset('public/upload/image/'.$site->icon) }}"> -->
+    <link rel="shortcut icon" href="{{ asset('/public/upload/image/rfb_logoo.png') }}">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <!-- Custom fonts for this template -->

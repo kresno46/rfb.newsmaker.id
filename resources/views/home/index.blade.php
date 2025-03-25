@@ -10,7 +10,7 @@
                   <h1><?php echo $slider->judul_galeri ?></h1>
                   <h4><?php echo $slider->isi ?></h4>
                   <div class="text-center text-lg-left">
-                    <a href="<?php echo $slider->website ?>" class="btn-get-started scrollto"><i class="fa fa-eye"></i> Lihat Detail...</a>
+                    <a href="https://regol.rifan-financindo-berjangka.co.id/" class="btn-get-started scrollto"><i class=""></i> Registrasi Akun Online</a>
                   </div>
                 </div>
               </div>
@@ -39,9 +39,123 @@
       <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
     </g>
   </svg>
-</section><!-- End Hero --><!-- Start main -->
-<main id="main">
+</section>
+<!-- End Hero -->
 
+<!-- ======= Top Main Header Area =======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Update</title>
+    <style>
+        /* CSS untuk market-update-container */
+        .market-update-container {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: #28a745;
+            box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+        }
+
+        .market-update-container .title {
+            position: absolute;
+            background: red;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            color: white;
+            font-weight: bold;
+            z-index: 200;
+        }
+
+        .market-update-container ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            animation: scroll 35s infinite linear;
+        }
+
+        .market-update-container ul li {
+            white-space: nowrap;
+            padding: 10px 24px;
+            color: white;
+            position: relative;
+        }
+
+        .market-update-container ul li::after {
+            content:"";
+            width: 1px;
+            height: 100%;
+            background: white;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .market-update-container ul li:last-child::after {
+            display: none;
+        }
+
+        @keyframes scroll {
+          from {
+              transform: translateX(100%);
+          }
+
+          to {
+              transform: translateX(-160%);
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="market-update-container">
+        <div class="title">
+            MARKET UPDATE
+        </div>
+        <ul>
+            <li>
+                Latest Quotes: GOLD: 3048.5 +1.8 (0.06%)
+            </li>
+
+            <li>
+                SILVER: 33.798 + 0.011 (0.03%)
+            </li>
+
+            <li>
+                HANGSENG: 24472 -262 (-1.07%)
+            </li>
+
+            <li>
+                NIKKEI 225: 37610 +100 (0.27%)
+            </li>
+
+            <li>
+                OIL: 71.16 +0.38 (0.54%)
+            </li>
+
+            <li>
+                EURUSD: 1.0908 +0.0007 (0.06%)
+            </li>
+
+            <li>
+                USDCHF: 0.8759 -0.0018 (-0.19%)
+            </li>
+
+            <li>
+                USD/IDR: 16464 -56 (-0.34%)
+            </li>
+        </ul>
+    </div>
+</body>
+</html> -->
+
+ <!-- Start main -->
+<main id="main">
  <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container-fluid">
@@ -114,9 +228,26 @@
           <?php } ?>
           
     </div>
+    <hr>
     <!-- END -->
+  </div>
+        
+    <hr>
+
+  <section id="getstarted" class="section section-text-light section-center" style="background-color: #343a40; margin-top: -40px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-12">
+                <div style="margin-bottom: 20px;">
+                    <div style="width: 100%;">
+                        <img src="public/upload/image/bannerISO.png" style="width:100%">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  <hr>
+  </section>
+
 </section>
 <!-- End Apa itu Nitrico? Section -->
 

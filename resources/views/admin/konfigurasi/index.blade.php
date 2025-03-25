@@ -59,8 +59,8 @@
     </div>
 
     <div class="form-group">
-    <label>Website address</label>
-    <input type="url" name="website" placeholder="{{ asset('/') }}" value="<?php echo $site->website ?>" class="form-control">
+    <label>Layanan pengaduan</label>
+    <input type="email" name="website" placeholder="{{ asset('/') }}" value="<?php echo $site->website ?>" class="form-control">
     </div>
     
     <div class="form-group">
