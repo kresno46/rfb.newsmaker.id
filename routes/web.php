@@ -44,6 +44,7 @@ Route::get('wakil_pialang/surabaya_pakuwon', 'WakilPialang@surabaya_pakuwon');
 Route::get('wakil_pialang/dbs_tower_jakarta', 'WakilPialang@dbs_tower_jakarta');
 Route::get('wakil_pialang/semarang', 'WakilPialang@semarang');
 Route::get('wakil_pialang/yogyakarta', 'WakilPialang@yogyakarta');
+Route::get('wakil_pialang/economic_calendar', 'WakilPialang@economic_calendar');
 // Login
 Route::get('login', 'Login@index');
 Route::post('login/cek', 'Login@cek');

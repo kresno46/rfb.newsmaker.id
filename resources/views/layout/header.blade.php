@@ -102,12 +102,13 @@ $nav_profil           = $myproduk->nav_profil();
                 <li class="active"><a href="{{ asset('/') }}">Beranda</a></li>
                 <li class="drop-down"><a href="#">Berita</a>
                     <ul>
-                        <li><a href="https://www.rfbnews.com/index.php/en/economic-news/economy">Economy</a></li>
+                        <!-- <li><a href="https://www.rfbnews.com/index.php/en/economic-news/economy">Economy</a></li>
                         <li><a href="https://www.rfbnews.com/index.php/en/economic-news/fiscal-moneter">Fiscal & Moneter</a></li>
                         <li><a href="https://www.rfbnews.com/index.php/en/market-news/index">Index</a></li>
                         <li><a href="https://www.rfbnews.com/index.php/en/market-news/commodity">Commodity</a></li>
                         <li><a href="https://www.rfbnews.com/index.php/en/market-news/currencies">Currencies</a></li>
-                        <li><a href="https://www.rfbnews.com/index.php/en/component/marketcalendar/marketcalendar">Economic Calendar</a></li>
+                        <li><a href="https://www.rfbnews.com/index.php/en/component/marketcalendar/marketcalendar">Economic Calendar</a></li> -->
+                        <li><a href="http://localhost/official/rfb-official/wakil_pialang/economic_calendar">Economic Calendar</a></li>
                     </ul>
                 </li>
                 <li class="drop-down"><a href="{{ asset('profil') }}review">Profil</a>

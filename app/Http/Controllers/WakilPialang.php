@@ -7,6 +7,23 @@ use PDF;
 
 class WakilPialang extends Controller
 {
+    // Economic Calendar
+    public function economic_calendar() 
+    {
+        $site   = DB::table('konfigurasi')->first();
+        $model  = new Produk_model();
+        $produk = $model->listing();
+
+        $data = array(  'title'     => 'Economic Calendar',
+                        'deskripsi' => 'Economic Calendar '.$site->namaweb,
+                        'keywords'  => 'Economic Calendar '.$site->namaweb,
+                        'site'      => $site,
+                        'produk'    => $produk,
+                        'content'   => 'home/economic_calendar'
+                    );
+        return view('layout/wrapper',$data);
+    }
+
     // Axa Tower
     public function axa_tower_jakarta() 
     {
