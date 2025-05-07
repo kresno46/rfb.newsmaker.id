@@ -1,5 +1,8 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WakilPialang;
+use App\Http\Controllers\Admin\KategoriWakilPialang;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +24,26 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'Home@index');
 Route::get('home', 'Home@index');
 Route::get('kontak', 'Home@kontak');
+Route::get('wakil_pialang', 'Home@wakil_pialang');
 Route::get('pemesanan', 'Home@pemesanan');
 Route::get('konfirmasi', 'Home@konfirmasi');
 Route::get('pembayaran', 'Home@pembayaran');
 Route::post('proses_pemesanan', 'Home@proses_pemesanan');
 Route::get('berhasil/{par1}', 'Home@berhasil');
 Route::get('cetak/{par1}', 'Home@cetak');
+// Wakil Pialang
+Route::get('wakil_pialang/axa_tower_jakarta', 'WakilPialang@axa_tower_jakarta');
+Route::get('wakil_pialang/medan', 'WakilPialang@medan');
+Route::get('wakil_pialang/solo', 'WakilPialang@solo');
+Route::get('wakil_pialang/balikpapan', 'WakilPialang@balikpapan');
+Route::get('wakil_pialang/palembang', 'WakilPialang@palembang');
+Route::get('wakil_pialang/surabaya_ciputra', 'WakilPialang@surabaya_ciputra');
+Route::get('wakil_pialang/bandung', 'WakilPialang@bandung');
+Route::get('wakil_pialang/pekanbaru', 'WakilPialang@pekanbaru');
+Route::get('wakil_pialang/surabaya_pakuwon', 'WakilPialang@surabaya_pakuwon');
+Route::get('wakil_pialang/dbs_tower_jakarta', 'WakilPialang@dbs_tower_jakarta');
+Route::get('wakil_pialang/semarang', 'WakilPialang@semarang');
+Route::get('wakil_pialang/yogyakarta', 'WakilPialang@yogyakarta');
 // Login
 Route::get('login', 'Login@index');
 Route::post('login/cek', 'Login@cek');

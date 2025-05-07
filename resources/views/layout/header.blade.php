@@ -133,8 +133,8 @@ $nav_profil           = $myproduk->nav_profil();
                         @foreach($nav_kategori_produk as $nkp)
                         <li><a href="{{ asset('produk/kategori/'.$nkp->slug_kategori_produk) }}">{{ $nkp->nama_kategori_produk }}</a></li>
                         @endforeach
-                        <li><a href="#"><hr style="margin: 0; padding: 0;"></a></li>
-                        <li><a href="{{ asset('produk') }}">Semua Produk</a></li>
+                        <!-- <li><a href="#"><hr style="margin: 0; padding: 0;"></a></li>
+                        <li><a href="{{ asset('produk') }}">Semua Produk</a></li> -->
                     </ul>
                 </li>
                 <li class="drop-down"><a href="#">Info & Aktivitas</a>
@@ -146,7 +146,7 @@ $nav_profil           = $myproduk->nav_profil();
                 <li class="drop-down"><a href="#">Kontak</a>
                     <ul>
                         <li><a href="{{ asset('kontak') }}">Hubungi Kami</a></li>
-                        <li><a href="{{ asset('galeri') }}">Wakil Pialang</a></li>
+                        <li><a href="{{ asset('wakil_pialang') }}">Wakil Pialang</a></li>
                     </ul>
                 </li>
             </ul>

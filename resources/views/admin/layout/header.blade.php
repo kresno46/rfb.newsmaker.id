@@ -78,7 +78,7 @@ $site                 = DB::table('konfigurasi')->first();
         <a class="nav-link" href="{{ asset('admin/kategori_produk') }}">
           <i class="fas fa-fw fa-tags"></i> <span>Kategori Produk</span></a>
       </li>
-     
+
       <!-- Divider -->
       <hr class="sidebar-divider">
       <div class="sidebar-heading">Konten Website</div>

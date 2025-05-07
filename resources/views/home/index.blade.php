@@ -218,7 +218,7 @@
           <?php } ?>
           <div class="clearfix"></div>
             <div class="col-md-12">
-              <hr>
+              
                {{ $produks->links() }}
               </div>
         <?php }else{ ?>
@@ -226,12 +226,99 @@
             <p class="alert alert-info">Produk tidak ditemukan. Gunakan kata kunci pencarian yang berbeda.</p>
           </div>
           <?php } ?>
-          
+      <hr>
     </div>
-    <hr>
+    
     <!-- END -->
   </div>
-        
+  
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2>BERITA TERBARU</h2>
+          <p><?php echo $site->namaweb ?></p>
+        </div>
+
+
+        <div class="row">
+
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4 berita">
+                  <figure class="thumnail">
+                      <img src="assets/img/gmbr_berita1.jpg" alt="" class="img-fluid img-thumbnail">
+                  </figure>
+                  <p class="harga">04:00 AM   06 MAY 2025</p>
+                  <div class="keterangan">
+                      <h3>
+                        <a href="https://www.rfbnews.com/index.php/en/economic-news/economy/93578-trump-orders-100-tariff-on-foreign-made-movies-to-save-dying-hollywood">
+                          Trump orders 100% tariff on foreign-made movies to save 'dying' Hollywood
+                        </a>
+                      </h3>
+                    <p class="harga">U.S. President Donald Trump on Sunday announced a 100% tariff on movies produced outside the country, saying the American movie industry was dying a "very fast death" due to the incentives that...</p>
+                    <div class="link-berita">
+                      <p>
+                        <input type="hidden" name="quantity" id="" value="1" class="quantity">
+                        <a href="https://www.rfbnews.com/index.php/en/economic-news/economy/93578-trump-orders-100-tariff-on-foreign-made-movies-to-save-dying-hollywood" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
+                          
+                      </p>
+                  </div>
+                  </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4 berita">
+                  <figure class="thumnail">
+                      <img src="assets/img/gmbr_berita2.jpg" alt="" class="img-fluid img-thumbnail">
+                  </figure>
+                  <p class="harga">07:22 AM   06 MAY 2025</p>
+                  <div class="keterangan">
+                      <h3>
+                        <a href="https://www.rfbnews.com/index.php/en/economic-news/economy/93583-trump-blocks-harvard-from-new-research-funding-in-latest-blow">
+                          Trump Blocks Harvard From New Research Funding In Latest Blow
+                        </a>
+                      </h3>
+                    <p class="harga">The Trump administration has declared Harvard University ineligible for new federal research grants in the latest escalation between the White House and the Ivy...</p>
+                    <div class="link-berita">
+                      <p>
+                        <input type="hidden" name="quantity" id="" value="1" class="quantity">
+                        <a href="The Trump administration has declared Harvard University ineligible for new federal research grants in the latest escalation between the White House and the Ivy..." class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
+                          
+                      </p>
+                  </div>
+                  </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4 berita">
+                  <figure class="thumnail">
+                      <img src="assets/img/gmbr_berita3.jpg" alt="" class="img-fluid img-thumbnail">
+                  </figure>
+                  <p class="harga">05:10 AM   07 MAY 2025</p>
+                  <div class="keterangan">
+                      <h3>
+                        <a href="https://www.rfbnews.com/index.php/en/economic-news/economy/93614-trump-in-no-rush-for-trade-deals-wants-everyone-to-pay-to-shop-in-america">
+                          Trump in no rush for trade deals, wants everyone to "pay to shop" in America
+                        </a>
+                      </h3>
+                    <p class="harga">President Trump offered some fresh comments on trade deals Tuesday, suggesting he is in no real hurry to sign any deals despite the clock ticking on the 90-day reciprocal tariff pause....</p>
+                    <div class="link-berita">
+                      <p>
+                        <input type="hidden" name="quantity" id="" value="1" class="quantity">
+                        <a href="https://www.rfbnews.com/index.php/en/economic-news/economy/93614-trump-in-no-rush-for-trade-deals-wants-everyone-to-pay-to-shop-in-america" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
+                          
+                      </p>
+                  </div>
+                  </div>
+            </div>
+
+
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  <hr>
+            
     <hr>
 
   <section id="getstarted" class="section section-text-light section-center" style="background-color: #343a40; margin-top: -40px;">
@@ -256,9 +343,11 @@
       <div class="container">
 
         <div class="section-title text-center" data-aos="fade-up">
-          <h2>Berita Terbaru</h2>
-          <p><?php echo $site->namaweb ?></p>
+          <!-- <h2>PENGUMUMAN</h2>
+          <p><?php echo $site->namaweb ?></p> -->
+          <p>Pengumuman</p>
         </div>
+
 
         <div class="row">
 
@@ -267,9 +356,9 @@
             foreach($berita as $berita) { ?>
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4 berita">
                   <figure class="thumnail">
-                    <a href="{{ asset('berita/detail/'.$berita->slug_berita) }}">
+                    <!-- <a href="{{ asset('berita/detail/'.$berita->slug_berita) }}">
                       <img src="{{ asset('public/upload/image/thumbs/'.$berita->gambar) }}" alt="<?php  echo $berita->judul_berita ?>" class="img-fluid img-thumbnail">
-                    </a>
+                    </a> -->
                   </figure>
                   <div class="keterangan">
                       <h3>
@@ -293,19 +382,139 @@
             <p class="alert alert-info">Produk tidak ditemukan. Gunakan kata kunci pencarian yang berbeda.</p>
           </div>
           <?php } ?>
-          <div class="col-md-12">
+          <!-- <div class="col-md-12">
             <hr>
             <p class="text-center">
               <a href="{{ asset('berita') }}" class="btn btn-success btn-smspaper"></i> Lihat berita lainnya...</a>
             </p>
             
-          </div>
+          </div> -->
         </div>
 
       </div>
     </section><!-- End Contact Section -->
-
+    
 </main>
+
+<hr>
+
+<div class="slider">
+  
+    <div class="slide-track">
+
+        <div class="slide">
+          <a href="https://bappebti.go.id/"><img src="public/upload/image/bappebti-logo.png" alt=""></a>
+        </div>
+        <div class="slide">
+          <a href="https://www.jfx.co.id/"><img src="public/upload/image/jfx-logo.png" alt=""></a>
+        </div>
+        <div class="slide">
+          <a href="https://www.ptkbi.com/index.php/c_kbi_wppue_01_anggota_mitra#PL"><img src="public/upload/image/kbi-logo.png" alt=""></a>
+        </div>
+        <div class="slide">
+          <a href="https://aspebtindo.org/anggota/daftar-anggota"><img src="public/upload/image/aspebtindo-logo.png" alt=""></a>
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+  .slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+
+  .slide-track {
+    display: flex;
+    width: calc(250px * 4);
+  }
+
+  .slide-track {
+    display: flex;
+    width: calc(250px * 4);
+    animation: scroll 25s linear infinite;
+  }
+
+  .slide-track:hover {
+    animation-play-state: paused;
+  } */
+
+  /* @keyframes scroll {
+    0% {
+        transform: translateX(300px);
+    }
+    100% {
+        transform: translateX(calc(-250px * 2));
+    }
+  }
+
+  /* @keyframes scroll {
+          from {
+              transform: translateX(100%);
+          }
+
+          to {
+              transform: translateX(-115%);
+          }
+        } */
+     
+     @keyframes scroll {
+          from {
+            transform: translateX(100%);
+          }
+
+          to {
+            transform: translateX(-115%);
+          }
+        }
+
+  .slide {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+  }
+
+  img {
+    width: 100%;
+    transition: transform 1s;
+    
+  }
+
+  .img:hover {
+    transform: translateZ(20px);
+  }
+
+  .slider::before,
+  .slider::after {
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+  }
+
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+</style>
+
 <script>
 var owl = $('.owl-carousel');
 owl.owlCarousel({
