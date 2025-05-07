@@ -138,9 +138,9 @@ $nav_profil           = $myproduk->nav_profil();
                         <li><a href="{{ asset('produk') }}">Semua Produk</a></li> -->
                     </ul>
                 </li>
-                <li class="drop-down"><a href="#">Info & Aktivitas</a>
+                <li class="drop-down"><a href="#">Informasi</a>
                     <ul>
-                        <li><a href="{{ asset('berita') }}">Aktivitas</a></li>
+                        <li><a href="{{ asset('berita') }}">Pengumuman</a></li>
                         <li><a href="{{ asset('video') }}">Video Youtube</a></li>
                     </ul>
                 </li>

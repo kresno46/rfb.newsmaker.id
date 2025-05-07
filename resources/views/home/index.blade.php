@@ -231,7 +231,8 @@
     
     <!-- END -->
   </div>
-  
+  <hr>
+
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact">
       <div class="container">
@@ -248,7 +249,7 @@
                   <figure class="thumnail">
                       <img src="assets/img/gmbr_berita1.jpg" alt="" class="img-fluid img-thumbnail">
                   </figure>
-                  <p class="harga">04:00 AM   06 MAY 2025</p>
+                  <p class="harga">06 MAY 2025</p>
                   <div class="keterangan">
                       <h3>
                         <a href="https://www.rfbnews.com/index.php/en/economic-news/economy/93578-trump-orders-100-tariff-on-foreign-made-movies-to-save-dying-hollywood">
@@ -270,7 +271,7 @@
                   <figure class="thumnail">
                       <img src="assets/img/gmbr_berita2.jpg" alt="" class="img-fluid img-thumbnail">
                   </figure>
-                  <p class="harga">07:22 AM   06 MAY 2025</p>
+                  <p class="harga">06 MAY 2025</p>
                   <div class="keterangan">
                       <h3>
                         <a href="https://www.rfbnews.com/index.php/en/economic-news/economy/93583-trump-blocks-harvard-from-new-research-funding-in-latest-blow">
@@ -292,7 +293,7 @@
                   <figure class="thumnail">
                       <img src="assets/img/gmbr_berita3.jpg" alt="" class="img-fluid img-thumbnail">
                   </figure>
-                  <p class="harga">05:10 AM   07 MAY 2025</p>
+                  <p class="harga">07 MAY 2025</p>
                   <div class="keterangan">
                       <h3>
                         <a href="https://www.rfbnews.com/index.php/en/economic-news/economy/93614-trump-in-no-rush-for-trade-deals-wants-everyone-to-pay-to-shop-in-america">

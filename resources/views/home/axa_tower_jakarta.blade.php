@@ -6,7 +6,7 @@
         <div class="wakil_pialang">
 
           <div class="kotak">
-          <div class="row">
+          <div class="row"> 
 
             <div class="col-md-12">
               <h1 class="text-center">Wakil Pialang Berjangka AXA Tower - Jakarta</h1>
