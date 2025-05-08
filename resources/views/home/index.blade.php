@@ -239,7 +239,7 @@
 
         <div class="section-title text-center" data-aos="fade-up">
           <h2>BERITA TERBARU</h2>
-          <p><?php echo $site->namaweb ?></p>
+          <!-- <p><?php echo $site->namaweb ?></p> -->
         </div>
 
 
