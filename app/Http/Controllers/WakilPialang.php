@@ -7,6 +7,75 @@ use PDF;
 
 class WakilPialang extends Controller
 {
+    // Petunjuk Transaksi
+    public function petunjuk_transaksi() 
+    {
+        $site   = DB::table('konfigurasi')->first();
+        $model  = new Produk_model();
+        $produk = $model->listing();
+
+        $data = array(  'title'     => 'Petunjuk Transaksi',
+                        'deskripsi' => 'Petunjuk Transaksi '.$site->namaweb,
+                        'keywords'  => 'Petunjuk Transaksi '.$site->namaweb,
+                        'site'      => $site,
+                        'produk'    => $produk,
+                        'content'   => 'home/petunjuk_transaksi'
+                    );
+        return view('layout/wrapper',$data);
+    }
+
+    // Prosedur Penarikan
+    public function prosedur_penarikan() 
+    {
+        $site   = DB::table('konfigurasi')->first();
+        $model  = new Produk_model();
+        $produk = $model->listing();
+
+        $data = array(  'title'     => 'Prosedur Penarikan',
+                        'deskripsi' => 'Prosedur Penarikan '.$site->namaweb,
+                        'keywords'  => 'Prosedur Penarikan '.$site->namaweb,
+                        'site'      => $site,
+                        'produk'    => $produk,
+                        'content'   => 'home/prosedur_penarikan'
+                    );
+        return view('layout/wrapper',$data);
+    }
+
+    // Prosedur Registrasi Online
+    public function prosedur_registrasi_online() 
+    {
+        $site   = DB::table('konfigurasi')->first();
+        $model  = new Produk_model();
+        $produk = $model->listing();
+
+        $data = array(  'title'     => 'Prosedur Registrasi Online',
+                        'deskripsi' => 'Prosedur Registrasi Online '.$site->namaweb,
+                        'keywords'  => 'Prosedur Registrasi Online '.$site->namaweb,
+                        'site'      => $site,
+                        'produk'    => $produk,
+                        'content'   => 'home/prosedur_registrasi_online'
+                    );
+        return view('layout/wrapper',$data);
+    }
+
+    // Historical Data
+    public function historical_data() 
+    {
+        $site   = DB::table('konfigurasi')->first();
+        $model  = new Produk_model();
+        $produk = $model->listing();
+
+        $data = array(  'title'     => 'Historical Data',
+                        'deskripsi' => 'Historical Data '.$site->namaweb,
+                        'keywords'  => 'Historical Data '.$site->namaweb,
+                        'site'      => $site,
+                        'produk'    => $produk,
+                        'content'   => 'home/historical_data'
+                    );
+        return view('layout/wrapper',$data);
+    }
+
+
     // Economic Calendar
     public function economic_calendar() 
     {

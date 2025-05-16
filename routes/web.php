@@ -45,6 +45,10 @@ Route::get('wakil_pialang/dbs_tower_jakarta', 'WakilPialang@dbs_tower_jakarta');
 Route::get('wakil_pialang/semarang', 'WakilPialang@semarang');
 Route::get('wakil_pialang/yogyakarta', 'WakilPialang@yogyakarta');
 Route::get('wakil_pialang/economic_calendar', 'WakilPialang@economic_calendar');
+Route::get('wakil_pialang/historical_data', 'WakilPialang@historical_data');
+Route::get('wakil_pialang/prosedur_registrasi_online', 'WakilPialang@prosedur_registrasi_online');
+Route::get('wakil_pialang/prosedur_penarikan', 'WakilPialang@prosedur_penarikan');
+Route::get('wakil_pialang/petunjuk_transaksi', 'WakilPialang@petunjuk_transaksi');
 // Login
 Route::get('login', 'Login@index');
 Route::post('login/cek', 'Login@cek');

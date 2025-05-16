@@ -9,7 +9,7 @@
           <div class="row">
 
             <div class="col-md-12">
-              <h1 class="text-center">Economic Calendar News</h1>
+              <h1 class="text-center">Historical Data</h1>
               <hr>
             </div>
               

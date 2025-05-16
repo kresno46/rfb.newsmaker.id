@@ -137,16 +137,16 @@ $nav_profil           = $myproduk->nav_profil();
                         <li><a href="https://www.rfbnews.com/index.php/en/component/marketcalendar/marketcalendar">Economic Calendar</a></li> -->
                         <li><a href="">Berita</a></li>
                         <li><a href="http://localhost/official/rfb-official/wakil_pialang/economic_calendar">Economic Calendar</a></li>
-                        <li><a href="">Historical Data</a></li>
+                        <li><a href="http://localhost/official/rfb-official/wakil_pialang/historical_data">Historical Data</a></li>
                         <li><a href="">Pivot & Fibonacci</a></li>
                     </ul>
                 </li>
                 <li class="drop-down"><a href="#">Prosedur Investasi</a>
                      <ul>
-                        <li><a href="">Prosedur Registrasi Online</a></li>
-                        <li><a href="">Prosedur Penarikan</a></li>
-                        <li><a href="">Petunjuk Transaksi</a></li>
-                        <li><a href="">Specimen Agreement</a></li>
+                        <li><a href="http://localhost/official/rfb-official/wakil_pialang/prosedur_registrasi_online">Prosedur Registrasi Online</a></li>
+                        <li><a href="http://localhost/official/rfb-official/wakil_pialang/prosedur_penarikan">Prosedur Penarikan</a></li>
+                        <li><a href="http://localhost/official/rfb-official/wakil_pialang/petunjuk_transaksi">Petunjuk Transaksi</a></li>
+                        <li><a href="https://www.rf-berjangka.com/images/content/spa_rfb_feb_2023_2.pdf">Specimen Agreement</a></li>
                      </ul>
                 </li>
                 <li class="drop-down"><a href="#">Informasi</a>
