@@ -61,7 +61,8 @@ $site       = DB::table('konfigurasi')->first();
 
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
-              <h3><?php echo $site->namaweb?></h3>
+              <!-- <h3><?php echo $site->namaweb?></h3> -->
+               <h3>PERHATIAN!</h3>
               <div class="pb-3">
                 <?php echo $site->deskripsi ?>
               </div>

@@ -10,7 +10,9 @@
                   <h1><?php echo $slider->judul_galeri ?></h1>
                   <h4><?php echo $slider->isi ?></h4>
                   <div class="text-center text-lg-left">
-                    <a href="https://regol.rifan-financindo-berjangka.co.id/" class="btn-get-started scrollto"><i class=""></i> Registrasi Akun Online</a>
+                    <a href="https://regol.rifan-financindo-berjangka.co.id/" class="btn-get-started scrollto"><i class=""></i>Registrasi Akun Online</a>
+                    <a href="https://demo.rifanberjangka.com/login" class="btn-get-started scrollto"><i class=""></i>Akun Demo</a>
+                    <a href="https://etrade.rifanberjangka.com/login" class="btn-get-started scrollto"><i class=""></i>Akun Real</a>
                   </div>
                 </div>
               </div>
@@ -239,7 +241,7 @@
 
         <div class="section-title text-center" data-aos="fade-up">
           <h2>BERITA TERBARU</h2>
-          <p><?php echo $site->namaweb ?></p>
+          <!-- <p><?php echo $site->namaweb ?></p> -->
         </div>
 
 
@@ -321,14 +323,14 @@
   <hr>
             
     <hr>
-
+    
   <section id="getstarted" class="section section-text-light section-center" style="background-color: #343a40; margin-top: -40px;">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-12">
                 <div style="margin-bottom: 20px;">
-                    <div style="width: 100%;">
-                        <img src="public/upload/image/bannerISO.png" style="width:100%">
+                    <div style="background: #ffffff; width: 100%;">
+                        <img src="public/upload/image/web_iso_2025.png" style="width:100%">
                     </div>
                 </div>
             </div>
@@ -404,9 +406,6 @@
     <div class="slide-track">
 
         <div class="slide">
-          <a href="https://bappebti.go.id/"><img src="public/upload/image/bappebti-logo.png" alt=""></a>
-        </div>
-        <div class="slide">
           <a href="https://www.jfx.co.id/"><img src="public/upload/image/jfx-logo.png" alt=""></a>
         </div>
         <div class="slide">
@@ -414,6 +413,9 @@
         </div>
         <div class="slide">
           <a href="https://aspebtindo.org/anggota/daftar-anggota"><img src="public/upload/image/aspebtindo-logo.png" alt=""></a>
+        </div>
+        <div class="slide">
+          <a href="https://bappebti.go.id/"><img src="public/upload/image/bappebti-logo.png" alt=""></a>
         </div>
 
     </div>
@@ -439,7 +441,7 @@
   .slide-track {
     display: flex;
     width: calc(250px * 4);
-    animation: scroll 25s linear infinite;
+    /* animation: scroll 25s linear infinite; */
   }
 
   .slide-track:hover {
@@ -516,7 +518,7 @@
   }
 </style>
 
-<script>
+<!-- <script>
 var owl = $('.owl-carousel');
 owl.owlCarousel({
     items:1,
@@ -532,4 +534,4 @@ $('.play').on('click',function(){
 $('.stop').on('click',function(){
     owl.trigger('stop.owl.autoplay')
 })
-</script>
+</script> -->

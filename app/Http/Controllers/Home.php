@@ -41,7 +41,7 @@ class Home extends Controller
         $model  = new Produk_model();
         $produk = $model->listing();
 
-        $data = array(  'title'     => 'Hubungi Kami: '.$site->namaweb.' - '.$site->tagline,
+        $data = array(  'title'     => 'Hubungi Kami: '.$site->namaweb,
                         'deskripsi' => 'Kontak '.$site->namaweb,
                         'keywords'  => 'Kontak '.$site->namaweb,
                         'site'      => $site,

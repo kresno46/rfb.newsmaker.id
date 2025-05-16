@@ -8,7 +8,7 @@
             <div class="col-md-12">
               <p class="text-right">
                 <a href="{{ asset('produk') }}" class="btn btn-success btn-sm"><i class="fa fa-file-pdf"></i> Produk Lainnya</a>
-                <a href="{{ asset('produk/cetak/'.$produk->slug_produk) }}" class="btn btn-warning btn-sm" target="_blank"><i class="fa fa-file-pdf"></i> Cetak</a>
+                <a href="{{ asset('produk/cetak/'.$produk->slug_produk) }}" class="btn btn-warning btn-sm" target="_blank"><i class="fa fa-file-pdf"></i> Download</a>
               </p>
               <hr>
             </div>

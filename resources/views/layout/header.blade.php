@@ -86,36 +86,25 @@ $nav_profil           = $myproduk->nav_profil();
     </style>
 </head>
 <body>
-    
+
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
-
         <div class="logo mr-auto">
             <h1 class="text-light"><a href="{{ asset('/') }}"><span>
-                <img src="{{ asset('public/upload/image/'.$site->logo) }}" alt="Nitrico" style="min-height: 50px; width: auto;">
+                <img src="{{ asset('public/upload/image/'.$site->logo) }}" alt="Nitrico" style="height: auto; width: 280px;">
             </span></a></h1>
         </div>
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li class="active"><a href="{{ asset('/') }}">Beranda</a></li>
-                <li class="drop-down"><a href="#">Berita</a>
-                    <ul>
-                        <!-- <li><a href="https://www.rfbnews.com/index.php/en/economic-news/economy">Economy</a></li>
-                        <li><a href="https://www.rfbnews.com/index.php/en/economic-news/fiscal-moneter">Fiscal & Moneter</a></li>
-                        <li><a href="https://www.rfbnews.com/index.php/en/market-news/index">Index</a></li>
-                        <li><a href="https://www.rfbnews.com/index.php/en/market-news/commodity">Commodity</a></li>
-                        <li><a href="https://www.rfbnews.com/index.php/en/market-news/currencies">Currencies</a></li>
-                        <li><a href="https://www.rfbnews.com/index.php/en/component/marketcalendar/marketcalendar">Economic Calendar</a></li> -->
-                        <li><a href="http://localhost/official/rfb-official/wakil_pialang/economic_calendar">Economic Calendar</a></li>
-                    </ul>
-                </li>
+                <li class=""><a href="{{ asset('/') }}">Beranda</a></li>
                 <li class="drop-down"><a href="{{ asset('profil') }}review">Profil</a>
                     <ul>
                         <?php foreach($nav_profil as $nav_profil) { ?>
-                        <li><a href="{{ asset('berita/read/'.$nav_profil->slug_berita) }}"><?php echo $nav_profil->judul_berita ?></a></li>
+                        <li><a href="{{ asset('berita/read/'.$nav_profil->slug_berita) }}">Profil Perusahaan</a></li>
                         <!-- <li><a href="#">Penghargaan</a></li> -->
+                        <li><a href="{{ asset('wakil_pialang') }}">Wakil Pialang</a></li>
                         <li><a href="{{ asset('galeri') }}">Legalitas Bisnis</a></li>
                         <?php } ?>
                     </ul>
@@ -138,18 +127,35 @@ $nav_profil           = $myproduk->nav_profil();
                         <li><a href="{{ asset('produk') }}">Semua Produk</a></li> -->
                     </ul>
                 </li>
+                <li class="drop-down"><a href="#">Analisis</a>
+                    <ul>
+                        <!-- <li><a href="https://www.rfbnews.com/index.php/en/economic-news/economy">Economy</a></li>
+                        <li><a href="https://www.rfbnews.com/index.php/en/economic-news/fiscal-moneter">Fiscal & Moneter</a></li>
+                        <li><a href="https://www.rfbnews.com/index.php/en/market-news/index">Index</a></li>
+                        <li><a href="https://www.rfbnews.com/index.php/en/market-news/commodity">Commodity</a></li>
+                        <li><a href="https://www.rfbnews.com/index.php/en/market-news/currencies">Currencies</a></li>
+                        <li><a href="https://www.rfbnews.com/index.php/en/component/marketcalendar/marketcalendar">Economic Calendar</a></li> -->
+                        <li><a href="">Berita</a></li>
+                        <li><a href="http://localhost/official/rfb-official/wakil_pialang/economic_calendar">Economic Calendar</a></li>
+                        <li><a href="">Historical Data</a></li>
+                        <li><a href="">Pivot & Fibonacci</a></li>
+                    </ul>
+                </li>
+                <li class="drop-down"><a href="#">Prosedur Investasi</a>
+                     <ul>
+                        <li><a href="">Prosedur Registrasi Online</a></li>
+                        <li><a href="">Prosedur Penarikan</a></li>
+                        <li><a href="">Petunjuk Transaksi</a></li>
+                        <li><a href="">Specimen Agreement</a></li>
+                     </ul>
+                </li>
                 <li class="drop-down"><a href="#">Informasi</a>
                     <ul>
-                        <li><a href="{{ asset('berita') }}">Pengumuman</a></li>
-                        <li><a href="{{ asset('video') }}">Video Youtube</a></li>
+                        <li><a href="{{ asset('berita') }}">Umum</a></li>
+                        <li><a href="{{ asset('video') }}">Video Umum</a></li>
                     </ul>
                 </li>
-                <li class="drop-down"><a href="#">Kontak</a>
-                    <ul>
-                        <li><a href="{{ asset('kontak') }}">Hubungi Kami</a></li>
-                        <li><a href="{{ asset('wakil_pialang') }}">Wakil Pialang</a></li>
-                    </ul>
-                </li>
+                <li class=""><a href="{{ asset('kontak') }}">Hubungi Kami</a></li>
             </ul>
         </nav><!-- .nav-menu -->
 

@@ -159,7 +159,7 @@
     <textarea name="metatext" rows="5" class="form-control" placeholder="Kode metatext"><?php echo $site->metatext ?></textarea>
     </div>
     
-    <h3>Google Map</h3><hr>
+    <!-- <h3>Google Map</h3><hr>
     <div class="form-group">
     <label>Google Map</label>
     <textarea name="google_map" rows="5" class="form-control" placeholder="Kode dari Google Map"><?php echo $site->google_map ?></textarea>
@@ -172,7 +172,7 @@
                 max-height: 200px;
             }
         </style>
-    <?php echo $site->google_map ?>
+    <?php echo $site->google_map ?> -->
 
     <hr>
     <div class="form-group btn-group">

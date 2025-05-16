@@ -29,7 +29,7 @@
                   }
 
                   main.table {
-                    width: 82vw;
+                    width: auto;
                     height: auto;
                     background-color: #fff5;
                     margin: 0 auto;
