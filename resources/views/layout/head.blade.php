@@ -128,7 +128,8 @@ $site = DB::table('konfigurasi')->first();
       height: 100%;
       background: rgba(0, 0, 0, 0.7);
       z-index: 9999;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
     }
     .popup-overlay.show {
       opacity: 1;
@@ -138,15 +139,17 @@ $site = DB::table('konfigurasi')->first();
       position: fixed;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -60%);
+      transform: translate(-50%, -70%);
       background: white;
       padding: 20px;
-      border-radius: 5px;
+      border-radius: 8px;
       max-width: 500px;
       width: 90%;
       z-index: 10000;
       opacity: 0;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      cursor: default;
     }
     .popup-overlay.show .popup-container {
       transform: translate(-50%, -50%);
@@ -194,10 +197,27 @@ $site = DB::table('konfigurasi')->first();
         document.getElementById('adPopup').classList.remove('show');
       }
       
-      // Show popup when page loads
+      // Show popup when page loads with a nice fade effect
       window.addEventListener('load', function() {
-        // Small delay to ensure smooth loading
-        setTimeout(showPopup, 1000);
+        setTimeout(showPopup, 1500); // Increased delay for better user experience
+      });
+
+      // Close popup when clicking outside
+      document.addEventListener('DOMContentLoaded', function() {
+        const popup = document.getElementById('adPopup');
+        const container = popup.querySelector('.popup-container');
+        
+        popup.addEventListener('click', function(e) {
+          // Close only if clicking outside the container
+          if (e.target === popup) {
+            closePopup();
+          }
+        });
+
+        // Prevent clicks inside the container from closing the popup
+        container.addEventListener('click', function(e) {
+          e.stopPropagation();
+        });
       });
     </script>
 </head>

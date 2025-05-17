@@ -97,12 +97,11 @@ $site       = DB::table('konfigurasi')->first();
             </p>
             <br>
               <div style="display: flex; align-items: center; gap: 20px;">
-                <img src="public/upload/image/NewsMaker_qrcode.png" style="height: 125px; width: auto;" alt="QR Code">
-              <a href="https://www.newsmaker.id/index.php/en/" target="">
-                <img src="public/upload/image/NewsMaker23-logo-white.png" style="height: auto; width: 175px;" alt="Logo">
-              </a>
+                <img src="{{ asset('public/upload/image/NewsMaker_qrcode.png') }}" style="height: 125px; width: auto;" alt="QR Code">
+                <a href="https://www.newsmaker.id/index.php/en/" target="_blank">
+                  <img src="{{ asset('public/upload/image/NewsMaker23-logo-white.png') }}" style="height: auto; width: 175px;" alt="Logo">
+                </a>
               </div>
-
           </div>
 
         </div>
