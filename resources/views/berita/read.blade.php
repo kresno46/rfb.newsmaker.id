@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-lg-12 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
         <div class="kotak">
-          <div class="row">
+          <div class="row"> 
             
             <div class="col-md-12">
               <h1 class="text-center"><?php echo $title ?></h1>
@@ -24,6 +24,19 @@
                       text-align: center;
                       padding-left: 60px;
                       padding-right: 60px;
+                    }
+                    .gambar-flex {
+                      display: flex;
+                      justify-content: center;
+                      flex-wrap: wrap;
+                      gap: 20px;
+                      margin-top: 30px;
+                    }
+                    .gambar-flex img {
+                      width: 200px;
+                      height: auto;
+                      border-radius: 10px;
+                      object-fit: cover;
                     }
                   </style>
                   <div class="keterangancol-md-8">

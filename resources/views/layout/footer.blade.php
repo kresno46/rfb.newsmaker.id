@@ -95,6 +95,13 @@ $site       = DB::table('konfigurasi')->first();
               <br>HP <i class="fab fa-whatsapp"></i>: <?php echo $site->hp ?>
               <br>Layanan pengaduan: <?php echo $site->email ?>
             </p>
+            <br>
+              <div style="display: flex; align-items: center; gap: 20px;">
+                <img src="public/upload/image/NewsMaker_qrcode.png" style="height: 125px; width: auto;" alt="QR Code">
+              <a href="https://www.newsmaker.id/index.php/en/" target="">
+                <img src="public/upload/image/NewsMaker23-logo-white.png" style="height: auto; width: 175px;" alt="Logo">
+              </a>
+              </div>
 
           </div>
 
@@ -104,7 +111,7 @@ $site       = DB::table('konfigurasi')->first();
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span><?php echo $site->namaweb ?></span></strong>. All Rights Reserved
+        &copy; Copyright 2025, <strong><span><?php echo $site->namaweb ?></span></strong>. All Rights Reserved
       </div>
       <!-- <div class="credits">
         Developed by <a href="https://javawebmedia.com/">Java Web Media</a>

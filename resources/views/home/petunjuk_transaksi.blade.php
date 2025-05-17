@@ -15,12 +15,12 @@
             <head>
                 <style>
                     .custom-link {
-                        color: inherit;
+                        color: #28a745;
                         text-decoration: none;
                     }
 
                     .custom-link:hover {
-                        color: #28a745;
+                        color: #007bff;
                         text-decoration: underline;
                     }
                 </style>
