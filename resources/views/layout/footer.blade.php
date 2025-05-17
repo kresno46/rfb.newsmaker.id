@@ -82,6 +82,30 @@ $site       = DB::table('konfigurasi')->first();
               <!-- <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('pemesanan') }}">Pemesanan Produk</a></li> -->
               <!-- <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('pembayaran') }}">Cara Pembayaran</a></li> -->
               <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('kontak') }}">Kontak</a></li>
+              <br><br>
+              <h4 style="margin-bottom: 15px; color: #28a745; text-align: center;">
+                Download Aplikasi Pro Trader
+              </h4>
+              <li style="margin-top: 10px; text-align: center;">
+                <div>
+                  <a href="https://apps.apple.com/id/app/pro-trader-royalassetindo/id6502900138?l=id" target="_blank" class="download-btn">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height: 45px; width: 155px;">
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.royalassetindo.protrader&hl=en&pli=1" target="_blank" class="download-btn">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height: 65px; width: 155px ;">
+                  </a>
+                </div>
+                <style>
+                  .download-btn:hover img {
+                    transform: scale(1.05);
+                  }
+                  @keyframes pulse {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.05); }
+                    100% { transform: scale(1); }
+                  }
+                </style>
+              </li>
             </ul>
           </div>
 

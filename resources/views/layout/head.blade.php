@@ -22,7 +22,8 @@ $site = DB::table('konfigurasi')->first();
     <link href="{{ asset('public/assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
     <link href="{{ asset('public/template/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('public/template/assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/template/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('public/template/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Template Main CSS File -->
     <link href="{{ asset('public/template/assets/css/style.css') }}" rel="stylesheet">
     <script src="{{ asset('public/admin/vendor/jquery/jquery.min.js') }}"></script>
