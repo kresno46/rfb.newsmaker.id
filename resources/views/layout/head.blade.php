@@ -37,6 +37,61 @@ $site = DB::table('konfigurasi')->first();
     <!-- sweetalert -->
     <script src="{{ asset('public/sweetalert/js/sweetalert.min.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('public/sweetalert/css/sweetalert.css') }}">
+    
+    <!-- World Time Script -->
+    <script>
+        function updateWorldTime() {
+            const timeOptions = { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                hour12: false
+            };
+
+            const dateOptions = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
+
+            // Current date in Indonesian
+            const now = new Date();
+            const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+            const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+            
+            const dayName = days[now.getDay()];
+            const date = now.getDate();
+            const monthName = months[now.getMonth()];
+            const year = now.getFullYear();
+            
+            document.getElementById('current-date').textContent = `${dayName}, ${date} ${monthName} ${year}`;
+
+            // Get current UTC time
+            const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+
+            // Jakarta (WIB/UTC+7)
+            const jakartaTime = new Date(utc + (7 * 3600000));
+            document.getElementById('jakarta-time').textContent = jakartaTime.toLocaleTimeString('en-US', timeOptions);
+
+            // Tokyo (JST/UTC+9)
+            const tokyoTime = new Date(utc + (9 * 3600000));
+            document.getElementById('tokyo-time').textContent = tokyoTime.toLocaleTimeString('en-US', timeOptions);
+
+            // Hong Kong (HKT/UTC+8)
+            const hongkongTime = new Date(utc + (8 * 3600000));
+            document.getElementById('hongkong-time').textContent = hongkongTime.toLocaleTimeString('en-US', timeOptions);
+
+            // New York (EST/UTC-5 or EDT/UTC-4)
+            const nyTime = new Date(utc - (4 * 3600000));
+            document.getElementById('newyork-time').textContent = nyTime.toLocaleTimeString('en-US', timeOptions);
+        }
+
+        // Update time every second
+        setInterval(updateWorldTime, 1000);
+        
+        // Initial update
+        document.addEventListener('DOMContentLoaded', updateWorldTime);
+    </script>
     <style type="text/css" media="screen">
       a.orange {
         color: #FFF;

@@ -74,7 +74,53 @@ $nav_profil           = $myproduk->nav_profil();
 </style>
 
 <!-- ======= Header ======= -->
+<style>
+.world-time {
+    color: white;
+    padding: 5px 15px;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    gap: 15px;
+    font-family: "Poppins", sans-serif;
+    z-index: 1000;
+    align-items: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+.world-time span {
+    display: inline-flex;
+    align-items: center;
+}
+.world-time .label {
+    font-weight: bold;
+    margin-right: 3px;
+}
+.world-time .date-info {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+.world-time .date-info i {
+    margin-right: 5px;
+}
+#header {
+    padding-top: 30px;
+}
+</style>
+
 <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="world-time">
+        <span class="date-info">
+            <i class="fas fa-calendar-alt"></i>
+            <span id="current-date">Loading...</span>
+        </span>
+        <span><span class="label">JKT</span> <span id="jakarta-time">00:00</span></span>
+        <span><span class="label">TKY</span> <span id="tokyo-time">00:00</span></span>
+        <span><span class="label">HK</span> <span id="hongkong-time">00:00</span></span>
+        <span><span class="label">NY</span> <span id="newyork-time">00:00</span></span>
+    </div>
     <div class="container d-flex align-items-center">
         <div class="logo mr-auto">
             <h1 class="text-light"><a href="{{ asset('/') }}"><span>
