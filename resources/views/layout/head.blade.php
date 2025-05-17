@@ -117,8 +117,89 @@ $site = DB::table('konfigurasi')->first();
     .galeri {
       margin-bottom: 30px;
     }
+    /* Popup styles */
+    .popup-overlay {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 9999;
+      transition: all 0.3s ease-in-out;
+    }
+    .popup-overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    .popup-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 500px;
+      width: 90%;
+      z-index: 10000;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+    .popup-overlay.show .popup-container {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 24px;
+      color: #666;
+    }
+    .popup-content {
+      text-align: center;
+    }
+    .popup-content img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
     </style>
 <?php echo $site->metatext; ?>
+    
+    <!-- Popup HTML -->
+    <div class="popup-overlay" id="adPopup">
+      <div class="popup-container">
+        <div class="popup-close" onclick="closePopup()">&times;</div>
+        <div class="popup-content">
+          <img src="{{ asset('public/upload/image/rfb_logoo.png') }}" alt="Advertisement">
+          <h3>Welcome to {{ $site->namaweb }}</h3>
+          <p>Join us now and start your trading journey!</p>
+          <a href="https://regol.rifan-financindo-berjangka.co.id/" class="btn btn-success">Register Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup Script -->
+    <script>
+      function showPopup() {
+        document.getElementById('adPopup').classList.add('show');
+      }
+      
+      function closePopup() {
+        document.getElementById('adPopup').classList.remove('show');
+      }
+      
+      // Show popup when page loads
+      window.addEventListener('load', function() {
+        // Small delay to ensure smooth loading
+        setTimeout(showPopup, 1000);
+      });
+    </script>
 </head>
 
 <body>
