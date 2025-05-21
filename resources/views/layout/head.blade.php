@@ -230,6 +230,7 @@ $site = DB::table('konfigurasi')->first();
     </style>
 <?php echo $site->metatext; ?>
     
+    @if(request()->is('/') || request()->is('home'))
     <!-- Popup HTML -->
     <div class="popup-overlay" id="adPopup">
       <div class="popup-container">
@@ -276,6 +277,7 @@ $site = DB::table('konfigurasi')->first();
         });
       });
     </script>
+    @endif
 </head>
 
 <body>

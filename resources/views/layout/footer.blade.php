@@ -67,7 +67,8 @@ $site       = DB::table('konfigurasi')->first();
                 <?php echo $site->deskripsi ?>
               </div>
               <div class="social-links mt-3">
-                <a href="<?php echo $site->facebook ?>" class="facebook"><i class="bx bxl-facebook"></i></a>
+                {{-- --}}
+                <a href="<?php echo $site->facebook ?>" class="titok"><i class="bx bxl-tiktok"></i></a>
                 <a href="<?php echo $site->instagram ?>" class="instagram"><i class="bx bxl-instagram"></i></a>
                 <a href="<?php echo $site->twitter ?>" class="google-plus"><i class="bx bxl-youtube"></i></a>
               </div>
@@ -120,10 +121,13 @@ $site       = DB::table('konfigurasi')->first();
               <br>Layanan pengaduan: <?php echo $site->email ?>
             </p>
             <br>
+            <p>
+              Support by PROTRADER
+            </p>
               <div style="display: flex; align-items: center; gap: 20px;">
-                <img src="{{ asset('public/upload/image/NewsMaker_qrcode.png') }}" style="height: 125px; width: auto;" alt="QR Code">
-                <a href="https://www.newsmaker.id/index.php/en/" target="_blank">
-                  <img src="{{ asset('public/upload/image/NewsMaker23-logo-white.png') }}" style="height: auto; width: 175px;" alt="Logo">
+                <img src="{{ asset('public/upload/image/qr.png') }}" style="height: 125px; width: auto;" alt="QR Code">
+                   <a href="https://demo.rifanberjangka.com/login" target="_blank">
+                  <img src="{{ asset('public/upload/image/LOGO PROTRADER Copy.png') }}" style="height: auto; width: 175px;" alt="Logo">
                 </a>
               </div>
           </div>
