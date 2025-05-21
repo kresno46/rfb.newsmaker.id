@@ -23,7 +23,7 @@
                 </div>
                 <?php }} ?>
               </div>
-                <div class="row">
+                <!-- <div class="row">
                   <a class="button secondary url col-lg-3 col-md-3 col-sm-3 col-xs-3 url" href="#zero">
                     <img src="{{ asset('public/upload/image/thumbs/'.$produk->gambar) }}" alt="<?php echo $produk->nama_produk; ?>" class="img img-thumbnail img-fluid" >
                   </a> 
@@ -32,7 +32,7 @@
                     <img src="{{ asset('public//upload/image/thumbs/'.$gambar->gambar) }}" alt="<?php echo $produk->nama_produk; ?>" class="img img-thumbnail img-fluid" >
                   </a> 
                   <?php }} ?>
-                </div>
+                </div> -->
                 
             </div>
 
@@ -40,11 +40,11 @@
               
               <h1><?php echo $title ?></h1>
               
-              <hr>
+              <!-- <hr> -->
                 <!-- <p><strong>Ukuran:</strong>
                   <br><?php echo $produk->ukuran; ?> | Berat: <?php echo $produk->berat; ?> gram
                 </p> -->
-                <hr>
+                <!-- <hr> -->
                 <div class="input-group">                  
                   <!-- <input type="number" name="quantity" id="<?php echo $produk->id_produk;?>" class="quantity form-control col-md-2" min="<?php echo $produk->jumlah_order_min ?>" max="<?php echo $produk->jumlah_order_max ?>" value="1" required> -->
 
@@ -55,7 +55,7 @@
                       </a> -->
                   </span>
                 </div>
-                <hr>
+                <!-- <hr> -->
                 <p><strong>Deskripsi:</strong>
                   <br><?php echo nl2br($produk->deskripsi) ?></p>
                 <?php echo $produk->isi; ?>

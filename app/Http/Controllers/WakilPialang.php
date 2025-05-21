@@ -7,6 +7,91 @@ use PDF;
 
 class WakilPialang extends Controller
 {
+    // Legalitas Bisnis
+    public function legalitasbisnis() 
+    {
+        $site   = DB::table('konfigurasi')->first();
+        $model  = new Produk_model();
+        $produk = $model->listing();
+
+        $data = array(  'title'     => 'Legalitas Bisnis',
+                        'deskripsi' => 'Legalitas Bisnis '.$site->namaweb,
+                        'keywords'  => 'Legalitas Bisnis '.$site->namaweb,
+                        'site'      => $site,
+                        'produk'    => $produk,
+                        'content'   => 'home/legalitasbisnis'
+                    );
+        return view('layout/wrapper',$data);
+    }    
+
+    // Fibonacci
+    public function fibonacci() 
+    {
+        $site   = DB::table('konfigurasi')->first();
+        $model  = new Produk_model();
+        $produk = $model->listing();
+
+        $data = array(  'title'     => 'Pivot & Fibonacci',
+                        'deskripsi' => 'Fibonacci '.$site->namaweb,
+                        'keywords'  => 'Fibonacci '.$site->namaweb,
+                        'site'      => $site,
+                        'produk'    => $produk,
+                        'content'   => 'home/fibonacci'
+                    );
+        return view('layout/wrapper',$data);
+    }
+
+    // Pivot
+    public function pivot() 
+    {
+        $site   = DB::table('konfigurasi')->first();
+        $model  = new Produk_model();
+        $produk = $model->listing();
+
+        $data = array(  'title'     => 'Pivot & Fibonacci',
+                        'deskripsi' => 'Pivot '.$site->namaweb,
+                        'keywords'  => 'Pivot '.$site->namaweb,
+                        'site'      => $site,
+                        'produk'    => $produk,
+                        'content'   => 'home/pivot'
+                    );
+        return view('layout/wrapper',$data);
+    }
+
+    // Berita1
+    public function berita1() 
+    {
+        $site   = DB::table('konfigurasi')->first();
+        $model  = new Produk_model();
+        $produk = $model->listing();
+
+        $data = array(  'title'     => 'Berita1',
+                        'deskripsi' => 'Berita1 '.$site->namaweb,
+                        'keywords'  => 'Berita1 '.$site->namaweb,
+                        'site'      => $site,
+                        'produk'    => $produk,
+                        'content'   => 'home/berita1'
+                    );
+        return view('layout/wrapper',$data);
+    }
+
+    // News
+    public function news() 
+    {
+        $site   = DB::table('konfigurasi')->first();
+        $model  = new Produk_model();
+        $produk = $model->listing();
+
+        $data = array(  'title'     => 'News',
+                        'deskripsi' => 'News '.$site->namaweb,
+                        'keywords'  => 'News '.$site->namaweb,
+                        'site'      => $site,
+                        'produk'    => $produk,
+                        'content'   => 'home/news'
+                    );
+        return view('layout/wrapper',$data);
+    }
+
     // Petunjuk Transaksi
     public function petunjuk_transaksi() 
     {

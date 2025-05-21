@@ -248,13 +248,13 @@
         <div class="row">
 
         <div class="col-lg-4 col-md-6 col-sm-12 mb-4 berita">
-                  <figure class="thumnail">
-                      <img src="assets/img/gmbr_berita1.jpg" alt="" class="img-fluid img-thumbnail">
-                  </figure>
+                  <!-- <figure class="thumnail">
+                      <img src="\official\rfb-official\public\upload\image\gmbr_berita1.jpg" alt="" class="img-fluid img-thumbnail">
+                  </figure> -->
                   <p class="harga">06 MAY 2025</p>
                   <div class="keterangan">
                       <h3>
-                        <a href="https://www.rfbnews.com/index.php/en/economic-news/economy/93578-trump-orders-100-tariff-on-foreign-made-movies-to-save-dying-hollywood">
+                        <a href="{{ asset('wakil_pialang/berita1') }}">
                           Trump orders 100% tariff on foreign-made movies to save 'dying' Hollywood
                         </a>
                       </h3>
@@ -262,7 +262,7 @@
                     <div class="link-berita">
                       <p>
                         <input type="hidden" name="quantity" id="" value="1" class="quantity">
-                        <a href="https://www.rfbnews.com/index.php/en/economic-news/economy/93578-trump-orders-100-tariff-on-foreign-made-movies-to-save-dying-hollywood" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
+                        <a href="{{ asset('wakil_pialang/berita1') }}" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
                           
                       </p>
                   </div>
@@ -270,13 +270,13 @@
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4 berita">
-                  <figure class="thumnail">
-                      <img src="assets/img/gmbr_berita2.jpg" alt="" class="img-fluid img-thumbnail">
-                  </figure>
+                  <!-- <figure class="thumnail">
+                      <img src="\official\rfb-official\public\upload\image\gmbr_berita2.jpg" alt="" class="img-fluid img-thumbnail">
+                  </figure> -->
                   <p class="harga">06 MAY 2025</p>
                   <div class="keterangan">
                       <h3>
-                        <a href="https://www.rfbnews.com/index.php/en/economic-news/economy/93583-trump-blocks-harvard-from-new-research-funding-in-latest-blow">
+                        <a href="{{ asset('wakil_pialang/berita1') }}">
                           Trump Blocks Harvard From New Research Funding In Latest Blow
                         </a>
                       </h3>
@@ -284,7 +284,7 @@
                     <div class="link-berita">
                       <p>
                         <input type="hidden" name="quantity" id="" value="1" class="quantity">
-                        <a href="The Trump administration has declared Harvard University ineligible for new federal research grants in the latest escalation between the White House and the Ivy..." class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
+                        <a href="{{ asset('wakil_pialang/berita1') }}" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
                           
                       </p>
                   </div>
@@ -292,13 +292,13 @@
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4 berita">
-                  <figure class="thumnail">
-                      <img src="assets/img/gmbr_berita3.jpg" alt="" class="img-fluid img-thumbnail">
-                  </figure>
+                  <!-- <figure class="thumnail">
+                      <img src="\official\rfb-official\public\upload\image\gmbr_berita3.jpg" alt="" class="img-fluid img-thumbnail">
+                  </figure> -->
                   <p class="harga">07 MAY 2025</p>
                   <div class="keterangan">
                       <h3>
-                        <a href="https://www.rfbnews.com/index.php/en/economic-news/economy/93614-trump-in-no-rush-for-trade-deals-wants-everyone-to-pay-to-shop-in-america">
+                        <a href="{{ asset('wakil_pialang/berita1') }}">
                           Trump in no rush for trade deals, wants everyone to "pay to shop" in America
                         </a>
                       </h3>
@@ -306,7 +306,7 @@
                     <div class="link-berita">
                       <p>
                         <input type="hidden" name="quantity" id="" value="1" class="quantity">
-                        <a href="https://www.rfbnews.com/index.php/en/economic-news/economy/93614-trump-in-no-rush-for-trade-deals-wants-everyone-to-pay-to-shop-in-america" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
+                        <a href="{{ asset('wakil_pialang/berita1') }}" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
                           
                       </p>
                   </div>

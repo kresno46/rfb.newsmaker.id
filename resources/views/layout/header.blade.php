@@ -233,7 +233,7 @@ $nav_profil           = $myproduk->nav_profil();
                         <?php foreach($nav_profil as $nav_profil) { ?>
                         <li><a href="{{ asset('berita/read/'.$nav_profil->slug_berita) }}">Profil Perusahaan</a></li>
                         <li><a href="{{ asset('wakil_pialang') }}">Wakil Pialang</a></li>
-                        <li><a href="{{ asset('galeri') }}">Legalitas Bisnis</a></li>
+                        <li><a href="{{ asset('wakil_pialang/legalitasbisnis') }}">Legalitas Bisnis</a></li>
                         <?php } ?>
                     </ul>
                 </li>
@@ -246,10 +246,10 @@ $nav_profil           = $myproduk->nav_profil();
                 </li>
                 <li class="drop-down"><a href="#">Analisis</a>
                     <ul>
-                        <li><a href="">Berita</a></li>
+                        <li><a href="{{ asset('wakil_pialang/news') }}">Berita</a></li>
                         <li><a href="{{ asset('wakil_pialang/economic_calendar') }}">Economic Calendar</a></li>
                         <li><a href="{{ asset('wakil_pialang/historical_data') }}">Historical Data</a></li>
-                        <li><a href="">Pivot & Fibonacci</a></li>
+                        <li><a href="{{ asset('wakil_pialang/pivot') }}">Pivot & Fibonacci</a></li>
                     </ul>
                 </li>
                 <li class="drop-down"><a href="#">Prosedur Investasi</a>

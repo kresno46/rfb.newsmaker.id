@@ -10,7 +10,6 @@
               <hr>
             </div>
 
-            
               <?php foreach($videos as $video) { ?>
           <div class="col-lg-6 col-md-6 galeri">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">

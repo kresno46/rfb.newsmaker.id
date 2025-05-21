@@ -14,1057 +14,493 @@
             </div>
               
               <style>
-                .btn-cal-active {
-                    border-radius: 10px !important;
-                    padding: 15px 20px;
-                    background: #d1260c;
-                    border-color: #d1260c;
-                    color: #ffffff;
-                    margin: 0px 7px 7px 0px;
-                }
-                .btn-cal {
-                    border-radius: 10px !important;
-                    padding: 15px 20px;
-                    background: #d9d9d9;
-                    border-color: #d9d9d9;
-                    color: #166e9f;
-                    margin: 0px 7px 7px 0px;
-                }
-                th, td {
-                    border-bottom: 1px solid #bcbcbc;
-                    text-align: center;
-                }
-                .badge-yellow {
-                    background: #d7c204;
-                }
-                .badge-green {
-                    background: #5eb820;
-                }
-                .badge {
-                    display: inline-block;
-                    padding: 5px 20px;
-                    color: #ffffff;
-                    font-size: 0.75em;
-                    font-weight: 700;
-                    line-height: 1;
-                    text-align: center;
-                    white-space: nowrap;
-                    vertical-align: baseline;
-                    -moz-border-radius: 9px;
-                    border-radius: 9px;
-                }
-                .row > * {
-                    -webkit-flex-shrink: 0;
-                    -ms-flex-negative: 0;
-                    flex-shrink: 0;
-                    width: 100%;
-                    max-width: 100%;
-                    padding-right: calc(var(--bs-gutter-x) / 2);
-                    padding-left: calc(var(--bs-gutter-x) / 2);
-                    margin-top: var(--bs-gutter-y);
-                }
+				.page-link {
+					position: relative;
+					display: block;
+					padding: var(--bs-pagination-padding-y) var(--bs-pagination-padding-x);
+					font-size: var(--bs-pagination-font-size);
+					color: var(--bs-pagination-color);
+					text-decoration: none;
+					background-color: var(--bs-pagination-bg);
+				}
+				.page-link {
+					position: relative;
+					display: block;
+					padding: .5rem .75rem;
+					margin-left: -1px;
+					line-height: 1.25;
+					color:rgb(0, 0, 0);
+					border-radius: 10px;
+					background-color: #fff;
+				}
+				.pagination-area .page-numbers {
+					width: 40px;
+					height: 37px;
+					margin: 0 3px;
+					display: inline-block;
+					background-color: #28a745;
+					line-height: 35px;
+					color: #171821;
+					box-shadow: 0 2px 10px 0rgb(0, 0, 0);
+					font-size: 18px;
+					font-weight: bold;
+					border-radius: 10px;
+					text-align: center;
+				}
+				.pagination-area {
+					margin-top: 30px;
+					text-align: center;
+				}
+				.mb-3 {
+					margin-bottom: 1rem !important;
+				}
+				@media (min-width: 992px) {
+					.col-lg-12 {
+						width: 100%;
+					}
+				}
+				.table {
+					--bs-table-color-type: initial;
+					--bs-table-bg-type: initial;
+					--bs-table-color-state: initial;
+					--bs-table-bg-state: initial;
+					--bs-table-color: var(--bs-emphasis-color);
+					--bs-table-bg: var(--bs-body-bg);
+					--bs-table-border-color: var(--bs-border-color);
+					--bs-table-accent-bg: transparent;
+					--bs-table-striped-color: var(--bs-emphasis-color);
+					--bs-table-striped-bg: rgba(var(--bs-emphasis-color-rgb), 0.05);
+					--bs-table-active-color: var(--bs-emphasis-color);
+					--bs-table-active-bg: rgba(var(--bs-emphasis-color-rgb), 0.1);
+					--bs-table-hover-color: var(--bs-emphasis-color);
+					--bs-table-hover-bg: rgba(var(--bs-emphasis-color-rgb), 0.075);
+					width: 100%;
+					margin-bottom: 1rem;
+					vertical-align: top;
+					border-color: var(--bs-table-border-color);
+				}
+				table {
+					caption-side: bottom;
+					border-collapse: collapse;
+				}
+				table {
+					display: table;
+					text-indent: initial;
+					unicode-bidi: isolate;
+					border-spacing: 2px;
+				}
+				.table-responsive {
+					overflow-x: auto;
+				}											
+				button:not(:disabled) {
+					cursor: pointer;
+				}
+				.btn-filter {
+					border-radius: 5px !important;
+					padding: 7px 20px;
+					background: #28a745;
+					border-color: #28a745;
+					color: #ffffff;
+					margin: 0px 7px 7px 0px !important;
+				}
+				.btn {
+					--bs-btn-padding-x: 0.75rem;
+					--bs-btn-padding-y: 0.375rem;
+					--bs-btn-font-family: ;
+					--bs-btn-font-size: 1rem;
+					--bs-btn-font-weight: 400;
+					--bs-btn-line-height: 1.5;
+					--bs-btn-color: var(--bs-body-color);
+					--bs-btn-bg: transparent;
+					--bs-btn-border-width: var(--bs-border-width);
+					--bs-btn-border-color: transparent;
+					--bs-btn-border-radius: var(--bs-border-radius);
+					--bs-btn-hover-border-color: transparent;
+					--bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+					--bs-btn-disabled-opacity: 0.65;
+					--bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+					display: inline-block;
+					font-family: var(--bs-btn-font-family);
+					font-size: var(--bs-btn-font-size);
+					font-weight: var(--bs-btn-font-weight);
+					line-height: var(--bs-btn-line-height);
+					text-align: center;
+					text-decoration: none;
+					vertical-align: middle;
+					user-select: none;
+					border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+					transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+				}
+				[type=button], [type=reset], [type=submit], button {
+					-webkit-appearance: button;
+				}
+				button {
+					outline: 0 !important;
+				}
+				button, select {
+					text-transform: none;
+				}
+				button {
+					text-rendering: auto;
+					letter-spacing: normal;
+					word-spacing: normal;
+					text-indent: 0px;
+					text-shadow: none;
+					padding-block: 1px;
+					padding-inline: 6px;
+				}
+				div {
+					display: block;
+					unicode-bidi: isolate;
+				}
+				input.form-control {
+					height: 40px;
+				}
+				.h-form {
+					margin: 0 10px 10px 0;
+				}
+				.nice-select.open .list {
+					opacity: 1;
+					pointer-events: auto;
+					transform: scale(1) translateY(0);
+				}
+				.nice-select .list {
+					background-color: #fff;
+					border-radius: 5px;
+					box-shadow: 0 0 0 1px rgba(68, 68, 68, .11);
+					box-sizing: border-box;
+					margin-top: 4px;
+					overflow: hidden;
+					padding: 0;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					-ms-transform-origin: 50% 0;
+					transform-origin: 50% 0;
+					transition: all 0.2s cubic-bezier(.5,0,0,1.25), opacity 0.15s ease-out;
+					z-index: 9;
+				}
+				dl, ol, ul {
+					margin-top: 0;
+					margin-bottom: 1rem;
+				}
+				ul {
+					display: block;
+					list-style-type: disc;
+					margin-block-start: 1em;
+					margin-block-end: 1em;
+					padding-inline-start: 40px;
+					unicode-bidi: isolate;
+				}
+				.nice-select {
+					-webkit-tap-highlight-color: transparent;
+					background-color: #fff;
+					border-radius: 5px;
+					border: solid 1px #e8e8e8;
+					box-sizing: border-box;
+					clear: both;
+					cursor: pointer;
+					display: block;
+					font-size: 14px;
+					font-weight: 400;
+					height: 42px;
+					line-height: 40px;
+					outline: none;
+					padding-left: 18px;
+					padding-right: 30px;
+					position: relative;
+					text-align: left !important;
+					transition: all 0.2s ease-in-out;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					user-select: none;
+					white-space: nowrap;
+					width: auto;
+				}
+				.nice-select .option.selected {
+					font-weight: 700;
+				}
+				.nice-select .option {
+					cursor: pointer;
+					line-height: 40px;
+					list-style: none;
+					min-height: 40px;
+					outline: none;
+					padding-left: 18px;
+					padding-right: 29px;
+					text-align: left;
+					transition: all 0.2s;
+				}
+				.form-control {
+					display: block;
+					width: 100%;
+					padding: .375rem .75rem;
+					font-size: 1rem;
+					font-weight: 400;
+					line-height: 1.5;
+					color: var(--bs-body-color);
+					-moz-appearance: none;
+					appearance: none;
+					background-color: var(--bs-body-bg);
+					background-clip: padding-box;
+					border: var(--bs-border-width) solid var(--bs-border-color);
+					border-radius: var(--bs-border-radius);
+					transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+				}	
+				select {
+					word-wrap: normal;
+				}
+				button, select {
+					text-transform: none;
+				}
+				button, input, optgroup, select, textarea {
+					margin: 0;
+					font-family: inherit;
+					font-size: inherit;
+					line-height: inherit;
+				}
+				.mt-3 {
+					margin-top: 1rem !important;
+				}
+				.d-inline-flex {
+					display: inline-flex !important;
+				}
+				form {
+					display: block;
+					margin-top: 0em;
+					unicode-bidi: isolate;
+				}
+				.mb-4 {
+					margin-bottom: 1.5rem !important;
+				}
+				*, ::after, ::before {
+					box-sizing: border-box;
+				}
+                .row>* {
+					max-width: 100%;
+					padding-right: calc(var(--bs-gutter-x) * .5);
+					padding-left: calc(var(--bs-gutter-x) * .5);
+					margin-top: var(--bs-gutter-y);
+				}
                 @media (min-width: 992px) {
-                    .col-lg-12 {
-                        -webkit-box-flex: 0;
-                        -webkit-flex: 0 0 auto;
-                        -moz-box-flex: 0;
-                        -ms-flex: 0 0 auto;
-                        flex: 0 0 auto;
-                        width: 100%;
-                    }
-                }
+					.col-lg-8 {
+						flex: 0 0 auto;
+						width: 66.66666667%;
+					}
+				}
               </style>
 
-            <div class="economic-calendar-button aos-init aos-animate" data-aos="fade-up">
+			  <div class="col-lg-8">
+                    
+					<div class="mb-4">
+						<!--Filter-->
+						<form method="GET" id="price-history-filter-form" action="">
+							<div class="d-inline-flex flex-wrap date-con view-mob" style="flex-wrap:wrap !important;">
+								<!-- <select name="cid" class="h-form" onchange="this.form.submit()" style="display: none;">
+									<option value="107" selected="">LGD Daily</option>
+									<option value="143">LSI</option>
+									<option value="110">HSI Daily</option>
+									<option value="113">SNI Daily</option>
+									<option value="115">AUD/USD</option>
+									<option value="116">EUR/USD</option>
+									<option value="117">GBP/USD</option>
+									<option value="118">USD/CHF</option>
+									<option value="119">USD/JPY</option>
+								</select><div class="nice-select h-form" tabindex="0"><span class="current">LGD Daily</span><ul class="list"><li data-value="107" class="option selected">LGD Daily</li><li data-value="143" class="option">LSI</li><li data-value="110" class="option">HSI Daily</li><li data-value="113" class="option">SNI Daily</li><li data-value="115" class="option">AUD/USD</li><li data-value="116" class="option">EUR/USD</li><li data-value="117" class="option">GBP/USD</li><li data-value="118" class="option">USD/CHF</li><li data-value="119" class="option">USD/JPY</li></ul></div>
 
-            <button class="btn btn-cal-active">Today</button>
-                    <a href="">
-                <button class="btn btn-cal">This Week</button>
-                </a>
-                <a href="">
-                <button class="btn btn-cal">Previous Week</button>
-                </a>
-                <a href="">
-                <button class="btn btn-cal">Next Week</button>
-                </a>
-            </div>
+								<select name="period" class="h-form" onchange="this.form.submit()" style="display: none;">
+									<option value="d" selected="">Daily</option>
+									<option value="m">Monthly</option>
+								</select>
+								<div class="nice-select h-form" tabindex="0"><span class="current">Daily</span><ul class="list"><li data-value="d" class="option selected">Daily</li><li data-value="m" class="option">Monthly</li></ul></div> -->
 
-            <div data-aos="fade-up" class="row-fluid aos-init aos-animate">
-	<table class="table table-responsive">
-		<thead>
-			<tr>
-				<th scope="col">Time</th>
-				<th scope="col">Country</th>
-				<th scope="col">Impact</th>
-				<th scope="col">Figures</th>
-				<th scope="col">Previous</th>
-				<th scope="col">Forecast</th>
-				<th scope="col">Actual</th>
-			</tr>
-		</thead>
-		<tbody>
-				<tr style="" data-toggle="collapse" data-target="#item-177" class="accordion-toggle">
-					<td>00.01 </td>
-					<td>U.S</td>
-					<td><span class="badge badge-yellow">M</span></td>
-					<td class="text-left">10-y Bond Auction</td>
-					<td class="text-right">4.44|2.7	</td>
-					<td class="text-right"></td>
-					<td class="text-right" style="color:#00c500">4.34|2.6</td>
-				</tr>
-				<!--start collapse-->
+								<div class="d-flex h-form"><span class="date-title">Start</span><input name="sd" value="" class="form-control" type="date"><span id="startDateSelected"></span></div>
+								<div class="d-flex h-form"><span class="date-title">End</span><input name="ed" value="" class="form-control" type="date"><span id="endDateSelected"></span></div>
 
-				<tr>
-					<td colspan="7" class="hiddenRow" style="background-color: #F5F5F5;">
-						<div class="accordian-body collapse" id="item-177">
-							<span class="ce-detail">
-								<!--Notes-->
-								<div class="row">
-									<div class="col-md-6 text-left box-cal-detail">
-										<div class="mb-3">
-											<h5>Sources</h5>
-											Treasury Direct										</div>
-										<div class="mb-3">
-											<h5>Measures</h5>
-											Yield tertinggi dari obligasi 10-tahun pemerintah Amerika yang di jual melalui lelang obligasi dan lelang bid-to-cover ratio;										</div>
-										<div class="mb-3">
-											<h5><i class="icon-cog"></i> Usual Effect</h5>
-											Tidak ada pengaruh yang konsisten - namun tetap memiliki risiko dan berimplikasi terhadap pertumbuhan ekonomi										</div>
-										<div class="mb-3">
-											<h5><i class="icon-random"></i> Frequency</h5>
-											Biasanya diadakan secara bulanan										</div>
-										<div class="mb-3">
-											<h5><i class="icon-hand-up"></i> Next Released</h5>
-																							No Information
-																					</div>
-										<div class="mb-3">
-											<h5><i class="icon-list-alt"></i> Notes</h5>
-											Hasil lelang dilaporkan dalam format 'X.XX|X.X' - angka pertama adalah tingkat bunga tertinggi dari obligasi yang terjual, dan angka kedua adalah rasio bid-to-cover (jumlah penawaran yang diajukan per penawaran yang diterima);										</div>
-										<div class="mb-3">
-											<h5><i class="icon-eye-open"></i> Why Trader Care</h5>
-											Imbal hasil ditentukan oleh investor pasar obligasi, dan oleh karena itu dapat digunakan untuk menguraikan pandangan investor mengenai suku bunga di masa depan. Rasio bid-to-cover mewakili likuiditas dan permintaan pasar obligasi, yang dapat digunakan untu										</div>
-									</div>
+								<button type="submit" class="btn btn-filter h-form">Filter</button>
 
-									<!--history-->
-
-									<div class="col-md-6">
-										<table class="table table-light table-condensed" style="border-collapse:collapse;">
-											<thead>
-												<tr>
-													<th class="text-center success">History</th>
-													<th class="text-center">Previous</th>
-													<th class="text-center">Forecast</th>
-													<th class="text-center">Actual</th>
-												</tr>
-											</thead>
-											<tbody>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-05-07">2025-05-07</a></td>
-														<td class="text-center">4.44|2.7	</td>
-														<td class="text-center"></td>
-														<td class="text-center">4.34|2.6</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-04-10">2025-04-10</a></td>
-														<td class="text-center">4.31|2.6	</td>
-														<td class="text-center">-</td>
-														<td class="text-center">4.44|2.7</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-03-13">2025-03-13</a></td>
-														<td class="text-center">4.63|2.5	</td>
-														<td class="text-center"></td>
-														<td class="text-center">4.31|2.6</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-02-13">2025-02-13</a></td>
-														<td class="text-center">4.68|2.5</td>
-														<td class="text-center">-</td>
-														<td class="text-center">4.63|2.5</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-01-08">2025-01-08</a></td>
-														<td class="text-center">4.24|2.7</td>
-														<td class="text-center">-</td>
-														<td class="text-center">4.68|2.5</td>
-													</tr>
-																							</tbody>
-										</table>
-									</div>
-								</div>
-							</span>
+								<div class="btn btn-filter h-form" id="downloadHistory">Download</div>
+							</div>
+						</form>
+					</div>
+					<!-- table history -->
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered">
+							<thead class="table-tools">
+								<tr>
+									<th>Date</th>
+									<th>Open</th>
+									<th>High</th>
+									<th>Low</th>
+									<th>Close</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>16 May 2025</td>
+									<td>3250.76</td>
+									<td>3250.91</td>
+									<td>3154.18</td>
+									<td>3195.30</td>
+								</tr>
+								<tr>
+									<td>15 May 2025</td>
+									<td>3182.81</td>
+									<td>3239.52</td>
+									<td>3121.09</td>
+									<td>3238.31</td>
+								</tr>
+								<tr>
+									<td>14 May 2025</td>
+									<td>3254.16</td>
+									<td>3256.96</td>
+									<td>3168.20</td>
+									<td>3179.95</td>
+								</tr>
+								<tr>
+									<td>13 May 2025</td>
+									<td>3233.85</td>
+									<td>3264.95</td>
+									<td>3215.93</td>
+									<td>3254.07</td>
+								</tr>
+								<tr>
+									<td>12 May 2025</td>
+									<td>3272.38</td>
+									<td>3289.84</td>
+									<td>3207.74</td>
+									<td>3235.10</td>
+								</tr>
+								<tr>
+									<td>09 May 2025</td>
+									<td>3323.09</td>
+									<td>3347.26</td>
+									<td>3274.57</td>
+									<td>3330.05</td>
+								</tr>
+								<tr>
+									<td>08 May 2025</td>
+									<td>3369.96</td>
+									<td>3414.36</td>
+									<td>3288.88</td>
+									<td>3309.93</td>
+								</tr>
+								<tr>
+									<td>07 May 2025</td>
+									<td>3382.34</td>
+									<td>3404.40</td>
+									<td>3360.36</td>
+									<td>3368.05</td>
+								</tr>
+							</tbody>
+						</table>
+								<div class="col-lg-12 col-md-12 mb-3">
+								<div class="pagination-area">
+									<li class="page-numbers disabled"><a class="page-numbers current" aria-current="page" href="#" onclick="\&quot;javascript.void(0);\&quot;">&lt;&lt;</a></li><li class="page-numbers disabled"><a class="page-numbers current" aria-current="page" href="#" onclick="\&quot;javascript.void(0);\&quot;">&lt;</a></li><li class="page-numbers active"><a class="page-numbers current" aria-current="page" href="#" onclick="\&quot;javascript.void(0);\&quot;">1</a></li><li class="page-numbers"><a href="/index.php/en/historical-data-2?start=8" class="page-link" title="2" onclick="javascript.void(0);">2</a></li><li class="page-numbers"><a href="/index.php/en/historical-data-2?start=16" class="page-link" title="3" onclick="javascript.void(0);">3</a></li><li class="page-numbers"><a href="/index.php/en/historical-data-2?start=24" class="page-link" title="4" onclick="javascript.void(0);">4</a></li><li class="page-numbers"><a href="/index.php/en/historical-data-2?start=8" class="page-link" title=">" onclick="javascript.void(0);">&gt;</a></li><li class="page-numbers"><a href="/index.php/en/historical-data-2?start=2592" class="page-link" title=">>" onclick="javascript.void(0);">&gt;&gt;</a></li>			</div>
+							</div>
 						</div>
-					</td>
-				</tr>
+																
+					<!-- <div class="d-inline-flex mt-3">
+						<select id="194_calc_from" class="h-form" style="display: none;">
+							<option value="RP">RP</option>
+							<option value="JPY">JPY</option>
+							<option value="USDEUR">EUR</option>
+							<option value="USDGBP">GBP</option>
+							<option value="USDAUD">AUD</option>
+							<option value="CHF">CHF</option>
+							<option value="USD">USD</option>
+						</select>
+					<div class="nice-select h-form" tabindex="0"><span class="current">RP</span>
+						<ul class="list">
+							<li data-value="RP" class="option selected">RP</li>
+							<li data-value="JPY" class="option">JPY</li>
+							<li data-value="USDEUR" class="option">EUR</li>
+							<li data-value="USDGBP" class="option">GBP</li>
+							<li data-value="USDAUD" class="option">AUD</li>
+							<li data-value="CHF" class="option">CHF</li>
+							<li data-value="USD" class="option">USD</li>
+						</ul>
+					</div>
 
-				<!--end collapse-->
-											<tr style="" data-toggle="collapse" data-target="#item-136" class="accordion-toggle">
-										<td>13.00 </td>
-					<td>EUR</td>
-					<td><span class="badge badge-green">L</span></td>
-					<td class="text-left">German Factory Orders m/m</td>
-					<td class="text-right">0.0%	</td>
-					<td class="text-right">1.1%	</td>
-					<td class="text-right" style="color:#FF0000"></td>
-				</tr>
-				<!--start collapse-->
+						<input type="text" class="d-flex form-control h-form" id="194_calc_from_inp" placeholder="Currency Value">
 
-				<tr>
-					<td colspan="7" class="hiddenRow" style="background-color: #F5F5F5;">
-						<div class="accordian-body collapse" id="item-136">
-							<span class="ce-detail">
-								<!--Notes-->
-								<div class="row">
-									<div class="col-md-6 text-left box-cal-detail">
-										<div class="mb-3">
-											<h5>Sources</h5>
-											Bundesbank Jerman										</div>
-										<div class="mb-3">
-											<h5>Measures</h5>
-											Perubahan nilai total pesanan pembelian baru dengan produsen;										</div>
-										<div class="mb-3">
-											<h5><i class="icon-cog"></i> Usual Effect</h5>
-											Aktual &gt; Perkiraan = Positif										</div>
-										<div class="mb-3">
-											<h5><i class="icon-random"></i> Frequency</h5>
-											Rilis bulanan, sekitar 35 hari setelah bulan berakhir										</div>
-										<div class="mb-3">
-											<h5><i class="icon-hand-up"></i> Next Released</h5>
-																							No Information
-																					</div>
-										<div class="mb-3">
-											<h5><i class="icon-list-alt"></i> Notes</h5>
-											-										</div>
-										<div class="mb-3">
-											<h5><i class="icon-eye-open"></i> Why Trader Care</h5>
-											Ini adalah indikator utama produksi - meningkatnya pesanan pembelian menandakan bahwa produsen akan meningkatkan aktivitas saat mereka berupaya memenuhi pesanan;										</div>
-									</div>
+						<span class="date-title">=</span>
 
-									<!--history-->
-
-									<div class="col-md-6">
-										<table class="table table-light table-condensed" style="border-collapse:collapse;">
-											<thead>
-												<tr>
-													<th class="text-center success">History</th>
-													<th class="text-center">Previous</th>
-													<th class="text-center">Forecast</th>
-													<th class="text-center">Actual</th>
-												</tr>
-											</thead>
-											<tbody>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-05-07">2025-05-07</a></td>
-														<td class="text-center">0.0%	</td>
-														<td class="text-center">1.1%	</td>
-														<td class="text-center"></td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-04-04">2025-04-04</a></td>
-														<td class="text-center">-7.0%</td>
-														<td class="text-center">3.4%</td>
-														<td class="text-center">0.0%</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-03-07">2025-03-07</a></td>
-														<td class="text-center">5.9%	</td>
-														<td class="text-center">-2.4%</td>
-														<td class="text-center">-7.0%	</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-02-06">2025-02-06</a></td>
-														<td class="text-center">-5.4%	</td>
-														<td class="text-center">1.9%	</td>
-														<td class="text-center">6.9%</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-01-08">2025-01-08</a></td>
-														<td class="text-center">-1.5%</td>
-														<td class="text-center">-0.3%</td>
-														<td class="text-center">-5.4%</td>
-													</tr>
-																							</tbody>
-										</table>
-									</div>
-								</div>
-							</span>
+						<select id="194_calc_to" "="" class=" h-form" style="display: none;">
+							<option value="RP">RP</option>
+							<option value="JPY">JPY</option>
+							<option value="USDEUR">EUR</option>
+							<option value="USDGBP">GBP</option>
+							<option value="USDAUD">AUD</option>
+							<option value="CHF">CHF</option>
+							<option value="USD">USD</option>
+						</select>
+						<div class="nice-select h-form" tabindex="0"><span class="current">RP</span>
+							<ul class="list">
+								<li data-value="RP" class="option selected">RP</li>
+								<li data-value="JPY" class="option">JPY</li>
+								<li data-value="USDEUR" class="option">EUR</li>
+								<li data-value="USDGBP" class="option">GBP</li>
+								<li data-value="USDAUD" class="option">AUD</li>
+								<li data-value="CHF" class="option">CHF</li>
+								<li data-value="USD" class="option">USD</li>
+							</ul>
 						</div>
-					</td>
-				</tr>
 
-				<!--end collapse-->
-											<tr style="" data-toggle="collapse" data-target="#item-152" class="accordion-toggle">
-										<td>13.45 </td>
-					<td>EUR</td>
-					<td><span class="badge badge-green">L</span></td>
-					<td class="text-left">French Trade Balance</td>
-					<td class="text-right">-7.9B	</td>
-					<td class="text-right">-7.0B</td>
-					<td class="text-right" style="color:#00c500"></td>
-				</tr>
-				<!--start collapse-->
+						<input type="text" class="form-control h-form" id="194_calc_to_inp" placeholder="Currency Value">
+					</div>
 
-				<tr>
-					<td colspan="7" class="hiddenRow" style="background-color: #F5F5F5;">
-						<div class="accordian-body collapse" id="item-152">
-							<span class="ce-detail">
-								<!--Notes-->
-								<div class="row">
-									<div class="col-md-6 text-left box-cal-detail">
-										<div class="mb-3">
-											<h5>Sources</h5>
-											Kementerian Keuangan Perancis										</div>
-										<div class="mb-3">
-											<h5>Measures</h5>
-											Selisih nilai antara barang impor dan ekspor selama bulan yang dilaporkan;										</div>
-										<div class="mb-3">
-											<h5><i class="icon-cog"></i> Usual Effect</h5>
-											Aktual &gt; Perkiraan = Positif										</div>
-										<div class="mb-3">
-											<h5><i class="icon-random"></i> Frequency</h5>
-											Rilis bulanan, sekitar 35 hari setelah bulan berakhir										</div>
-										<div class="mb-3">
-											<h5><i class="icon-hand-up"></i> Next Released</h5>
-																							No Information
-																					</div>
-										<div class="mb-3">
-											<h5><i class="icon-list-alt"></i> Notes</h5>
-											Angka positif menunjukkan bahwa lebih banyak barang yang diekspor daripada yang diimpor;										</div>
-										<div class="mb-3">
-											<h5><i class="icon-eye-open"></i> Why Trader Care</h5>
-											Permintaan ekspor dan permintaan mata uang saling terkait secara langsung karena orang asing harus membeli mata uang domestik untuk membayar ekspor negara tersebut. Permintaan ekspor juga memengaruhi produksi dan harga di produsen dalam negeri;										</div>
-									</div>
+					<script type="text/javascript">
+						jQuery(document).ready(function() {
+							function recalculate_194() {
+								var inputVal = jQuery("#194_calc_from_inp").val();
 
-									<!--history-->
+								if (inputVal == undefined || inputVal == "") return
 
-									<div class="col-md-6">
-										<table class="table table-light table-condensed" style="border-collapse:collapse;">
-											<thead>
-												<tr>
-													<th class="text-center success">History</th>
-													<th class="text-center">Previous</th>
-													<th class="text-center">Forecast</th>
-													<th class="text-center">Actual</th>
-												</tr>
-											</thead>
-											<tbody>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-05-07">2025-05-07</a></td>
-														<td class="text-center">-7.9B	</td>
-														<td class="text-center">-7.0B</td>
-														<td class="text-center"></td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-04-08">2025-04-08</a></td>
-														<td class="text-center">-6.5B</td>
-														<td class="text-center">-6.2B</td>
-														<td class="text-center">-7.9B</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-03-07">2025-03-07</a></td>
-														<td class="text-center">-3.9B	</td>
-														<td class="text-center">-4.1B</td>
-														<td class="text-center">-6.5B</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-02-07">2025-02-07</a></td>
-														<td class="text-center">-7.1B	</td>
-														<td class="text-center">-5.3B	</td>
-														<td class="text-center">-6.6B</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-01-08">2025-01-08</a></td>
-														<td class="text-center">-7.5B</td>
-														<td class="text-center">-7.0B</td>
-														<td class="text-center">-7.1B</td>
-													</tr>
-																							</tbody>
-										</table>
-									</div>
-								</div>
-							</span>
-						</div>
-					</td>
-				</tr>
+								var fromCur = jQuery("#194_calc_from").val();
+								var toCur = jQuery("#194_calc_to").val();
 
-				<!--end collapse-->
-											<tr style="" data-toggle="collapse" data-target="#item-331" class="accordion-toggle">
-										<td>14.00 </td>
-					<td>CHF</td>
-					<td><span class="badge badge-green">L</span></td>
-					<td class="text-left">Foreign Currency Reserves / Cadangan Devisa</td>
-					<td class="text-right">	726B</td>
-					<td class="text-right"></td>
-					<td class="text-right" style=""></td>
-				</tr>
-				<!--start collapse-->
+								fx.settings = {
+									from: fromCur,
+									to: toCur,
+								};
+								fx.rates = {
+									"CHF": 0.8375,
+									"USDGBP": 0.7529,
+									"USDAUD": 1.5610,
+									"RP": 16435,
+									"JPY": 145.58,
+									"USDEUR": 0.6971,
+									"USD": 1
+								};
+								fx.base = "USD";
 
-				<tr>
-					<td colspan="7" class="hiddenRow" style="background-color: #F5F5F5;">
-						<div class="accordian-body collapse" id="item-331">
-							<span class="ce-detail">
-								<!--Notes-->
-								<div class="row">
-									<div class="col-md-6 text-left box-cal-detail">
-										<div class="mb-3">
-											<h5>Sources</h5>
-											Swiss National Bank (SNB)										</div>
-										<div class="mb-3">
-											<h5>Measures</h5>
-											Total nilai cadangan devisa yang dimiliki oleh SNB;										</div>
-										<div class="mb-3">
-											<h5><i class="icon-cog"></i> Usual Effect</h5>
-											Aktual aan = Bagus untuk mata uang										</div>
-										<div class="mb-3">
-											<h5><i class="icon-random"></i> Frequency</h5>
-											Rilis bulanan, hari kerja keempat setelah bulan pengamatan berakhir										</div>
-										<div class="mb-3">
-											<h5><i class="icon-hand-up"></i> Next Released</h5>
-																							No Information
-																					</div>
-										<div class="mb-3">
-											<h5><i class="icon-list-alt"></i> Notes</h5>
-											-										</div>
-										<div class="mb-3">
-											<h5><i class="icon-eye-open"></i> Why Trader Care</h5>
-											Ini memberikan wawasan terhadap operasi pasar mata uang yang dilakukan oleh SNB, seperti seberapa aktif mereka akan mempertahankan nilai tukar franc terhadap euro;										</div>
-									</div>
+								var cvrt = fx.convert(inputVal);
 
-									<!--history-->
+								jQuery("#194_calc_to_inp").val(cvrt.toFixed(4));
+							}
 
-									<div class="col-md-6">
-										<table class="table table-light table-condensed" style="border-collapse:collapse;">
-											<thead>
-												<tr>
-													<th class="text-center success">History</th>
-													<th class="text-center">Previous</th>
-													<th class="text-center">Forecast</th>
-													<th class="text-center">Actual</th>
-												</tr>
-											</thead>
-											<tbody>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-05-07">2025-05-07</a></td>
-														<td class="text-center">	726B</td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-04-07">2025-04-07</a></td>
-														<td class="text-center">735B</td>
-														<td class="text-center"></td>
-														<td class="text-center">726B</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-03-07">2025-03-07</a></td>
-														<td class="text-center">736B</td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-02-07">2025-02-07</a></td>
-														<td class="text-center">731B	</td>
-														<td class="text-center"></td>
-														<td class="text-center">736B</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2024-12-06">2024-12-06</a></td>
-														<td class="text-center">719B</td>
-														<td class="text-center">-</td>
-														<td class="text-center">725B</td>
-													</tr>
-																							</tbody>
-										</table>
-									</div>
-								</div>
-							</span>
-						</div>
-					</td>
-				</tr>
+							jQuery("#194_calc_from_inp").keypress(function(event) {
+								if (event.which != 8 && isNaN(String.fromCharCode(event.which))) {
+									event.preventDefault();
+								}
+							});
 
-				<!--end collapse-->
-											<tr style="" data-toggle="collapse" data-target="#item-58" class="accordion-toggle">
-										<td>15.00 </td>
-					<td>EUR</td>
-					<td><span class="badge badge-green">L</span></td>
-					<td class="text-left">Italian Retail Sales m/m</td>
-					<td class="text-right">0.1%	</td>
-					<td class="text-right">0.2%</td>
-					<td class="text-right" style="color:#FF0000"></td>
-				</tr>
-				<!--start collapse-->
+							jQuery("#194_calc_from_inp").keyup(function(event) {
+								recalculate_194();
+							});
 
-				<tr>
-					<td colspan="7" class="hiddenRow" style="background-color: #F5F5F5;">
-						<div class="accordian-body collapse" id="item-58">
-							<span class="ce-detail">
-								<!--Notes-->
-								<div class="row">
-									<div class="col-md-6 text-left box-cal-detail">
-										<div class="mb-3">
-											<h5>Sources</h5>
-											Istat										</div>
-										<div class="mb-3">
-											<h5>Measures</h5>
-											Perubahan nilai total penjualan di tingkat ritel;										</div>
-										<div class="mb-3">
-											<h5><i class="icon-cog"></i> Usual Effect</h5>
-											Aktual &gt; Perkiraan = Positif										</div>
-										<div class="mb-3">
-											<h5><i class="icon-random"></i> Frequency</h5>
-											Rilis bulanan, sekitar 35 hari setelah periode bulan berjalan										</div>
-										<div class="mb-3">
-											<h5><i class="icon-hand-up"></i> Next Released</h5>
-																							No Information
-																					</div>
-										<div class="mb-3">
-											<h5><i class="icon-list-alt"></i> Notes</h5>
-											-										</div>
-										<div class="mb-3">
-											<h5><i class="icon-eye-open"></i> Why Trader Care</h5>
-											Ini adalah ukuran utama belanja konsumen, yang menyumbang sebagian besar aktivitas perekonomian secara keseluruhan;										</div>
-									</div>
+							jQuery("#194_calc_from").change(function(event) {
+								recalculate_194();
+							})
 
-									<!--history-->
+							jQuery("#194_calc_to").change(function(event) {
+								recalculate_194();
+							})
 
-									<div class="col-md-6">
-										<table class="table table-light table-condensed" style="border-collapse:collapse;">
-											<thead>
-												<tr>
-													<th class="text-center success">History</th>
-													<th class="text-center">Previous</th>
-													<th class="text-center">Forecast</th>
-													<th class="text-center">Actual</th>
-												</tr>
-											</thead>
-											<tbody>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-05-07">2025-05-07</a></td>
-														<td class="text-center">0.1%	</td>
-														<td class="text-center">0.2%</td>
-														<td class="text-center"></td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-04-04">2025-04-04</a></td>
-														<td class="text-center">-0.4%</td>
-														<td class="text-center">0.2%</td>
-														<td class="text-center">0.1%</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-03-05">2025-03-05</a></td>
-														<td class="text-center">0.6%	</td>
-														<td class="text-center">0.3%</td>
-														<td class="text-center">-0.4%</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-02-05">2025-02-05</a></td>
-														<td class="text-center">-0.4%</td>
-														<td class="text-center">0.1%</td>
-														<td class="text-center">0.6%</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-01-10">2025-01-10</a></td>
-														<td class="text-center">-0.5%	</td>
-														<td class="text-center">0.2%	</td>
-														<td class="text-center">-0.4%</td>
-													</tr>
-																							</tbody>
-										</table>
-									</div>
-								</div>
-							</span>
-						</div>
-					</td>
-				</tr>
-
-				<!--end collapse-->
-											<tr style="" data-toggle="collapse" data-target="#item-322" class="accordion-toggle">
-										<td>15.30 </td>
-					<td>GBP</td>
-					<td><span class="badge badge-yellow">M</span></td>
-					<td class="text-left">Construction PMI</td>
-					<td class="text-right">46.4</td>
-					<td class="text-right">46.0</td>
-					<td class="text-right" style="color:#FF0000"></td>
-				</tr>
-				<!--start collapse-->
-
-				<tr>
-					<td colspan="7" class="hiddenRow" style="background-color: #F5F5F5;">
-						<div class="accordian-body collapse" id="item-322">
-							<span class="ce-detail">
-								<!--Notes-->
-								<div class="row">
-									<div class="col-md-6 text-left box-cal-detail">
-										<div class="mb-3">
-											<h5>Sources</h5>
-											Markit										</div>
-										<div class="mb-3">
-											<h5>Measures</h5>
-											Tingkat indeks difusi berdasarkan survey atas manajer pembelian dalam industri konstruksi;										</div>
-										<div class="mb-3">
-											<h5><i class="icon-cog"></i> Usual Effect</h5>
-											Aktual &gt; Perkiraan = Bagus untuk mata uang										</div>
-										<div class="mb-3">
-											<h5><i class="icon-random"></i> Frequency</h5>
-											Rilis bulanan, biasanya pada hari kerja kedua setelah bulan pengamatan berakhir										</div>
-										<div class="mb-3">
-											<h5><i class="icon-hand-up"></i> Next Released</h5>
-																							No Information
-																					</div>
-										<div class="mb-3">
-											<h5><i class="icon-list-alt"></i> Notes</h5>
-											Angka diatas 50.0 menunjukan ekspansi, angka dibawah 50.0 menunjukan kontraksi aktivitas;										</div>
-										<div class="mb-3">
-											<h5><i class="icon-eye-open"></i> Why Trader Care</h5>
-											Ini adalah indikator utama kesehatan ekonomi - bisnis bereaksi dengan cepat terhadap kondisi pasar, dan manajer pembelian dalam industri ini mungkin yang memiliki wawasan dan pandangan yang relevan terhadap situasi ekonomi terkini;										</div>
-									</div>
-
-									<!--history-->
-
-									<div class="col-md-6">
-										<table class="table table-light table-condensed" style="border-collapse:collapse;">
-											<thead>
-												<tr>
-													<th class="text-center success">History</th>
-													<th class="text-center">Previous</th>
-													<th class="text-center">Forecast</th>
-													<th class="text-center">Actual</th>
-												</tr>
-											</thead>
-											<tbody>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-05-07">2025-05-07</a></td>
-														<td class="text-center">46.4</td>
-														<td class="text-center">46.0</td>
-														<td class="text-center"></td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-04-04">2025-04-04</a></td>
-														<td class="text-center">44.6</td>
-														<td class="text-center">46.5</td>
-														<td class="text-center">46.4</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-03-06">2025-03-06</a></td>
-														<td class="text-center">48.1	</td>
-														<td class="text-center">49.5</td>
-														<td class="text-center">44.6</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-02-06">2025-02-06</a></td>
-														<td class="text-center">53.3	</td>
-														<td class="text-center">53.5</td>
-														<td class="text-center">48.1</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-01-07">2025-01-07</a></td>
-														<td class="text-center">55.2</td>
-														<td class="text-center">54.3</td>
-														<td class="text-center">53.3</td>
-													</tr>
-																							</tbody>
-										</table>
-									</div>
-								</div>
-							</span>
-						</div>
-					</td>
-				</tr>
-
-				<!--end collapse-->
-											<tr style="" data-toggle="collapse" data-target="#item-135" class="accordion-toggle">
-										<td>16.00 </td>
-					<td>EUR</td>
-					<td><span class="badge badge-green">L</span></td>
-					<td class="text-left">Retail Sales m/m (EUR)</td>
-					<td class="text-right">0.3%	</td>
-					<td class="text-right">-0.1%</td>
-					<td class="text-right" style="color:#00c500"></td>
-				</tr>
-				<!--start collapse-->
-
-				<tr>
-					<td colspan="7" class="hiddenRow" style="background-color: #F5F5F5;">
-						<div class="accordian-body collapse" id="item-135">
-							<span class="ce-detail">
-								<!--Notes-->
-								<div class="row">
-									<div class="col-md-6 text-left box-cal-detail">
-										<div class="mb-3">
-											<h5>Sources</h5>
-											Komisi Statistik Wilayah Euro (Eurostat)										</div>
-										<div class="mb-3">
-											<h5>Measures</h5>
-											Perubahan nilai total penjualan yang disesuaikan dengan inflasi di tingkat ritel;										</div>
-										<div class="mb-3">
-											<h5><i class="icon-cog"></i> Usual Effect</h5>
-											Aktual &gt; Perkiraan = Positif										</div>
-										<div class="mb-3">
-											<h5><i class="icon-random"></i> Frequency</h5>
-											Rilis bulanan, sekitar 35 hari setelah bulan berakhir										</div>
-										<div class="mb-3">
-											<h5><i class="icon-hand-up"></i> Next Released</h5>
-																							No Information
-																					</div>
-										<div class="mb-3">
-											<h5><i class="icon-list-alt"></i> Notes</h5>
-											Cenderung memiliki dampak yang relatif kecil karena Jerman dan Prancis, yang menyumbang sekitar setengah dari ekonomi Zona Euro, merilis data belanja konsumen lebih awal;										</div>
-										<div class="mb-3">
-											<h5><i class="icon-eye-open"></i> Why Trader Care</h5>
-											Ini adalah ukuran utama pengeluaran konsumen, yang mencakup sebagian besar aktivitas ekonomi secara keseluruhan;										</div>
-									</div>
-
-									<!--history-->
-
-									<div class="col-md-6">
-										<table class="table table-light table-condensed" style="border-collapse:collapse;">
-											<thead>
-												<tr>
-													<th class="text-center success">History</th>
-													<th class="text-center">Previous</th>
-													<th class="text-center">Forecast</th>
-													<th class="text-center">Actual</th>
-												</tr>
-											</thead>
-											<tbody>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-05-07</a></td>
-														<td class="text-center">0.3%	</td>
-														<td class="text-center">-0.1%</td>
-														<td class="text-center"></td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-04-07</a></td>
-														<td class="text-center">0.0%</td>
-														<td class="text-center">0.5%</td>
-														<td class="text-center">0.3%	</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-03-06</a></td>
-														<td class="text-center">0.0%</td>
-														<td class="text-center">0.1%</td>
-														<td class="text-center">-0.3%</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-02-06</a></td>
-														<td class="text-center">0.0%	</td>
-														<td class="text-center">-0.1%</td>
-														<td class="text-center">-0.2%</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-01-09</a></td>
-														<td class="text-center">-0.3%</td>
-														<td class="text-center">0.3%</td>
-														<td class="text-center">0.1%</td>
-													</tr>
-																							</tbody>
-										</table>
-									</div>
-								</div>
-							</span>
-						</div>
-					</td>
-				</tr>
-
-				<!--end collapse-->
-											<tr style="" data-toggle="collapse" data-target="#item-28" class="accordion-toggle">
-										<td>21.30 </td>
-					<td>U.S</td>
-					<td><span class="badge badge-green">L</span></td>
-					<td class="text-left">Crude Oil Inventories</td>
-					<td class="text-right"></td>
-					<td class="text-right"></td>
-					<td class="text-right" style=""></td>
-				</tr>
-				<!--start collapse-->
-
-				<tr>
-					<td colspan="7" class="hiddenRow" style="background-color: #F5F5F5;">
-						<div class="accordian-body collapse" id="item-28">
-							<span class="ce-detail">
-								<!--Notes-->
-								<div class="row">
-									<div class="col-md-6 text-left box-cal-detail">
-										<div class="mb-3">
-											<h5>Sources</h5>
-											Administrasi Informasi Energi										</div>
-										<div class="mb-3">
-											<h5>Measures</h5>
-											Perubahan jumlah barel minyak mentah yang disimpan oleh perusahaan komersial selama seminggu terakhir;										</div>
-										<div class="mb-3">
-											<h5><i class="icon-cog"></i> Usual Effect</h5>
-											'Aktual' kurang dari 'Perkiraan' baik untuk mata uang;										</div>
-										<div class="mb-3">
-											<h5><i class="icon-random"></i> Frequency</h5>
-											Rilis mingguan, sekitar 4 hari setelah minggu berjalan										</div>
-										<div class="mb-3">
-											<h5><i class="icon-hand-up"></i> Next Released</h5>
-																							No Information
-																					</div>
-										<div class="mb-3">
-											<h5><i class="icon-list-alt"></i> Notes</h5>
-											Meskipun ini merupakan indikator AS, namun hal ini paling berdampak pada sektor energi Kanada yang cukup besar;										</div>
-										<div class="mb-3">
-											<h5><i class="icon-eye-open"></i> Why Trader Care</h5>
-											Ini adalah ukuran utama ketidakseimbangan pasokan dan permintaan di pasar, yang dapat menyebabkan perubahan tingkat produksi dan ketidakstabilan harga;										</div>
-									</div>
-
-									<!--history-->
-
-									<div class="col-md-6">
-										<table class="table table-light table-condensed" style="border-collapse:collapse;">
-											<thead>
-												<tr>
-													<th class="text-center success">History</th>
-													<th class="text-center">Previous</th>
-													<th class="text-center">Forecast</th>
-													<th class="text-center">Actual</th>
-												</tr>
-											</thead>
-											<tbody>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-05-07</a></td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-04-30</a></td>
-														<td class="text-center">0.2M	</td>
-														<td class="text-center">-0.6M	</td>
-														<td class="text-center">	-2.7M</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-04-23</a></td>
-														<td class="text-center">0.5M</td>
-														<td class="text-center">1.6M</td>
-														<td class="text-center">0.2M</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-04-16</a></td>
-														<td class="text-center">2.6M</td>
-														<td class="text-center">0.4M</td>
-														<td class="text-center">0.5M</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-04-09</a></td>
-														<td class="text-center">6.2M</td>
-														<td class="text-center">2.2M</td>
-														<td class="text-center">2.6M	</td>
-													</tr>
-																							</tbody>
-										</table>
-									</div>
-								</div>
-							</span>
-						</div>
-					</td>
-				</tr>
-
-				<!--end collapse-->
-											<tr style="" data-toggle="collapse" data-target="#item-148" class="accordion-toggle">
-										<td>Tentative </td>
-					<td>CHN</td>
-					<td><span class="badge badge-green">L</span></td>
-					<td class="text-left">Trade Balance (CHN)</td>
-					<td class="text-right"></td>
-					<td class="text-right"></td>
-					<td class="text-right" style=""></td>
-				</tr>
-				<!--start collapse-->
-
-				<tr>
-					<td colspan="7" class="hiddenRow" style="background-color: #F5F5F5;">
-						<div class="accordian-body collapse" id="item-148">
-							<span class="ce-detail">
-								<!--Notes-->
-								<div class="row">
-									<div class="col-md-6 text-left box-cal-detail">
-										<div class="mb-3">
-											<h5>Sources</h5>
-											CGAC (latest release)										</div>
-										<div class="mb-3">
-											<h5>Measures</h5>
-											Selisih nilai barang impor dan ekspor pada bulan sebelumnya;										</div>
-										<div class="mb-3">
-											<h5><i class="icon-cog"></i> Usual Effect</h5>
-											Aktual &gt; Perkiraan = Positif										</div>
-										<div class="mb-3">
-											<h5><i class="icon-random"></i> Frequency</h5>
-											Rilis bulanan, sekitar 10 hari setelah bulan berakhir										</div>
-										<div class="mb-3">
-											<h5><i class="icon-hand-up"></i> Next Released</h5>
-																							<a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-05-09">09-05-2025</a>
-																					</div>
-										<div class="mb-3">
-											<h5><i class="icon-list-alt"></i> Notes</h5>
-											Sumber tidak memiliki jadwal rilis yang dapat diandalkan - acara ini akan dicantumkan dengan rentang tanggal atau sebagai 'Tentatif' hingga data dirilis. Angka positif menunjukkan lebih banyak barang yang diekspor dibandingkan barang impor. Sumber pertama 										</div>
-										<div class="mb-3">
-											<h5><i class="icon-eye-open"></i> Why Trader Care</h5>
-											Permintaan ekspor dan permintaan mata uang berhubungan langsung karena orang asing biasanya membeli mata uang domestik untuk membayar ekspor suatu negara. Permintaan ekspor juga berdampak pada produksi dan harga produsen dalam negeri;										</div>
-									</div>
-
-									<!--history-->
-
-									<div class="col-md-6">
-										<table class="table table-light table-condensed" style="border-collapse:collapse;">
-											<thead>
-												<tr>
-													<th class="text-center success">History</th>
-													<th class="text-center">Previous</th>
-													<th class="text-center">Forecast</th>
-													<th class="text-center">Actual</th>
-												</tr>
-											</thead>
-											<tbody>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-05-07</a></td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-04-14</a></td>
-														<td class="text-center">1220B</td>
-														<td class="text-center">537B</td>
-														<td class="text-center">737B</td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-04-07</a></td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-03-07</a></td>
-														<td class="text-center">753B	</td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-													</tr>
-																																						<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="/index.php/en/component/marketcalendar/marketcalendar?date=2025-01-13">2025-01-13</a></td>
-														<td class="text-center">693B</td>
-														<td class="text-center">730B</td>
-														<td class="text-center">753B</td>
-													</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</span>
-						</div>
-					</td>
-				</tr>
-
-				<!--end collapse-->
-				<tr style="" data-toggle="collapse" data-target="#item-140" class="accordion-toggle">
-					<td>Tentative </td>
-					<td>EUR</td>
-					<td><span class="badge badge-green">L</span></td>
-					<td class="text-left">French 10-y Bond Auction</td>
-					<td class="text-right"></td>
-					<td class="text-right"></td>
-					<td class="text-right" style=""></td>
-				</tr>
-				<!--start collapse-->
-
-				<tr>
-					<td colspan="7" class="hiddenRow" style="background-color: #F5F5F5;">
-						<div class="accordian-body collapse" id="item-140">
-							<span class="ce-detail">
-								<!--Notes-->
-								<div class="row">
-									<div class="col-md-6 text-left box-cal-detail">
-										<div class="mb-3">
-											<h5>Sources</h5>
-											Departemen Keuangan Perancis
-                                        </div>
-										<div class="mb-3">
-											<h5>Measures</h5>
-											Rata-rata imbal hasil (yield) obligasi 10-tahun pemerintah Perancis yang dijual melalui lelang, dan lelang bid-to-cover ratio;
-                                        </div>
-										<div class="mb-3">
-											<h5><i class="icon-cog"></i> Usual Effect</h5>
-											Tidak ada pengaruh yang konsisten, namun tetap mengimplikasi terhadap risiko dan pertumbuhan.
-                                        </div>
-										<div class="mb-3">
-											<h5><i class="icon-random"></i> Frequency</h5>
-											Variabel, sekitar 11 kali dalam setahun
-                                        </div>
-										<div class="mb-3">
-											<h5><i class="icon-hand-up"></i> Next Released</h5>
-											No Information
-										</div>
-										<div class="mb-3">
-											<h5><i class="icon-list-alt"></i> Notes</h5>
-											Hasil lelang dilaporkan dalam format 'X.XX|X.X' - angka pertama adalah suku bunga rata-rata obligasi yang dijual, dan angka kedua adalah rasio bid-to-cover (jumlah tawaran yang dibuat per tawaran yang diterima). Sumber tidak memberikan waktu rilis yang pasti - peristiwa ini akan dicantumkan sebagai 'Tentatif' hingga data dirilis;
-                                        </div>
-										<div class="mb-3">
-											<h5><i class="icon-eye-open"></i> Why Trader Care</h5>
-											Imbal hasil ditetapkan oleh investor pasar obligasi, dan karenanya dapat digunakan untuk menguraikan prospek investor terhadap suku bunga di masa mendatang. Rasio bid-to-cover menggambarkan likuiditas dan permintaan pasar obligasi, yang dapat digunakan untuk mengukur keyakinan investor;
-                                        </div>
-									</div>
-
-									<!--history-->
-
-									<div class="col-md-6">
-										<table class="table table-light table-condensed" style="border-collapse:collapse;">
-											<thead>
-												<tr>
-													<th class="text-center success">History</th>
-													<th class="text-center">Previous</th>
-													<th class="text-center">Forecast</th>
-													<th class="text-center">Actual</th>
-												</tr>
-											</thead>
-											<tbody>
-													<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-05-07</a></td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-													</tr>
-													<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-05-02</a></td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-													</tr>
-													<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-04-03</a></td>
-														<td class="text-center">3.51|2.7	</td>
-														<td class="text-center"></td>
-														<td class="text-center">3.37|3.0	</td>
-													</tr>
-													<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-03-05</a></td>
-														<td class="text-center">3.15|2.2</td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-													</tr>
-													<tr data-toggle="collapse" data-target="#d1" class="accordion-toggle">
-														<td class="text-center"><a href="">2025-01-09</a></td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-														<td class="text-center"></td>
-													</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</span>
-						</div>
-					</td>
-				</tr>
-
-				<!--end collapse-->
-			
-		</tbody>
-	</table>
-
-	
-	</div>
+						});
+					</script> -->
+                </div>
 
           </div>
           </div>
