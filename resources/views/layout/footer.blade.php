@@ -85,7 +85,7 @@ $site       = DB::table('konfigurasi')->first();
               <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('kontak') }}">Kontak</a></li>
               <br><br>
               <h4 style="margin-bottom: 15px; color: #28a745; text-align: center;">
-                Download Aplikasi Pro Trader
+                <strong>Download Aplikasi Pro Trader</strong>
               </h4>
               <li style="margin-top: 10px; text-align: center;">
                 <div>
@@ -122,7 +122,7 @@ $site       = DB::table('konfigurasi')->first();
             </p>
             <br>
             <p>
-              Support by PROTRADER
+              <strong>Support by PROTRADER</strong>
             </p>
               <div style="display: flex; align-items: center; gap: 20px;">
                 <img src="{{ asset('public/upload/image/qr.png') }}" style="height: 125px; width: auto;" alt="QR Code">

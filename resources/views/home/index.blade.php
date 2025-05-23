@@ -518,7 +518,7 @@
   }
 </style>
 
-<!-- <script>
+<script>
 var owl = $('.owl-carousel');
 owl.owlCarousel({
     items:1,
@@ -534,4 +534,4 @@ $('.play').on('click',function(){
 $('.stop').on('click',function(){
     owl.trigger('stop.owl.autoplay')
 })
-</script> -->
+</script>

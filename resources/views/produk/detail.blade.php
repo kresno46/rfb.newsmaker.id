@@ -60,7 +60,7 @@
                   <br><?php echo nl2br($produk->deskripsi) ?></p>
                 <?php echo $produk->isi; ?>
             </div>
-            <?php  if($produk_all) { ?>
+            <!-- <?php  if($produk_all) { ?>
             <div class="col-md-12">
               <hr>
               <h3>Produk <?php echo $kategori_produk->nama_kategori_produk ?> lainnya</h3>
@@ -85,15 +85,15 @@
                   
                   </div>
                   <div class="link-produk">
-                    <!-- <p>
+                    <p>
                       <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Detail</a>
                       <a href="{{ asset('pemesanan?id_produk='.$produk->id_produk) }}" class="btn btn-info btn-sm">
                           <i class="fa fa-shopping-cart"></i> Pesan Produk Ini
                         </a>
-                    </p> -->
+                    </p>
                 </div>
             </div>
-          <?php }} ?>
+          <?php }} ?> -->
           </div>
         </div>
       </div>
