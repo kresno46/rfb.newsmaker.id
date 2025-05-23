@@ -1,32 +1,50 @@
 <section id="hero" style="color: #fff;">
   <div class="container">
-    <div class="row">
-        <div class="owl-carousel owl-theme">
-          <?php foreach($slider as $slider) { ?>
-          <div class="item">
-            <div class="row">
-              <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
-                <div data-aos="zoom-out" class="slideku">
-                  <h1><?php echo $slider->judul_galeri ?></h1>
-                  <h4><?php echo $slider->isi ?></h4>
-                  <div class="text-center text-lg-left">
-                    <a href="https://regol.rifan-financindo-berjangka.co.id/" class="btn-get-started scrollto"><i class=""></i>Registrasi Akun Online</a>
-                    <a href="https://demo.rifanberjangka.com/login" class="btn-get-started scrollto"><i class=""></i>Akun Demo</a>
-                    <a href="https://etrade.rifanberjangka.com/login" class="btn-get-started scrollto"><i class=""></i>Akun Real</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-5 order-1 order-lg-2 hero-img text-center" data-aos="zoom-out" data-aos-delay="300">
-                <div class="slideku">
-                  <p class="text-center"><img src="{{ asset('public/upload/image/'.$slider->gambar) }}" class="img img-fluid animated" alt="<?php echo $slider->judul_galeri ?>"></p>
-                </div>
+  <div class="row">
+    <div class="owl-carousel owl-theme">
+
+      {{-- Slide dari database --}}
+      @foreach($slider as $item)
+      <div class="item">
+        <div class="row">
+          <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
+            <div data-aos="zoom-out" class="slideku">
+              <h1>{{ $item->judul_galeri }}</h1>
+              <h4>{{ $item->isi }}</h4>
+              <div class="text-center text-lg-left">
+                <a href="https://regol.rifan-financindo-berjangka.co.id/" class="btn-get-started scrollto">Registrasi Akun Online</a>
+                <a href="https://demo.rifanberjangka.com/login" class="btn-get-started scrollto">Akun Demo</a>
+                <a href="https://etrade.rifanberjangka.com/login" class="btn-get-started scrollto">Akun Real</a>
               </div>
             </div>
           </div>
-          <?php } ?>
+          <div class="col-lg-5 order-1 order-lg-2 hero-img text-center" data-aos="zoom-out" data-aos-delay="300">
+            <div class="slideku">
+              <p class="text-center">
+                <img src="{{ asset('public/upload/image/'.$item->gambar) }}" class="img img-fluid animated" alt="{{ $item->judul_galeri }}">
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+      @endforeach
+
+      {{-- Slide tambahan dengan background perhatian.jpg --}}
+        <div class="item" style="background: url('{{ asset('public/upload/image/perhatian.jpg') }}') center center / cover no-repeat; color: white;">
+          <div class="row" style="min-height: 500px; display: flex; flex-direction: column; justify-content: flex-start; padding: 60px 30px;">
+
+            {{-- Konten tambahan bisa ditaruh di bawah sini --}}
+            <div class="col-lg-12 text-center mt-auto">
+              {{-- Anda bisa menambahkan tombol atau keterangan lain di sini --}}
+            </div>
+
+          </div>
+        </div>
+
     </div>
   </div>
+</div>
+
   <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
     <defs>
       <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
@@ -518,7 +536,7 @@
   }
 </style>
 
-<!-- <script>
+<script>
 var owl = $('.owl-carousel');
 owl.owlCarousel({
     items:1,
@@ -534,4 +552,4 @@ $('.play').on('click',function(){
 $('.stop').on('click',function(){
     owl.trigger('stop.owl.autoplay')
 })
-</script> -->
+</script>
