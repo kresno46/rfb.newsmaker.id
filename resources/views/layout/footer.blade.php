@@ -68,8 +68,8 @@ $site       = DB::table('konfigurasi')->first();
               </div>
               <div class="social-links mt-3">
                 {{-- --}}
-                <a href="<?php echo $site->facebook ?>" class="titok"><i class="bx bxl-tiktok"></i></a>
                 <a href="<?php echo $site->instagram ?>" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="<?php echo $site->facebook ?>" class="tiktok"><i class="bx bxl-tiktok"></i></a>
                 <a href="<?php echo $site->twitter ?>" class="google-plus"><i class="bx bxl-youtube"></i></a>
               </div>
             </div>

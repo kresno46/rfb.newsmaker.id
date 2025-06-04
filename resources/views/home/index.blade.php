@@ -188,48 +188,43 @@
           <br><br>
     </div>
         <!-- START -->
-    <div class="row">
-      <?php  
-            if($produks) {
-            foreach($produks as $produk) { ?>
-            <div class="col-lg-3 col-md-6 col-sm-10 mb-4 produk text-center">
-                  <figure class="thumnail">
-                    <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}">
-                      <img src="{{ asset('public/upload/image/'.$produk->gambar) }}" alt="<?php  echo $produk->nama_produk ?>" class="img-fluid img-thumbnail">
-                    </a>
-                  </figure>
-                  <div class="keterangan">
-                      <h3>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
+    <?php if ($produks): ?>
+        <?php foreach ($produks as $produk): ?>
+            <div class="col mb-4">
+                <div class="produk text-center">
+                    <figure class="thumbnail">
                         <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}">
-                          <?php  echo $produk->nama_produk ?>
+                            <img src="{{ asset('public/upload/image/'.$produk->gambar) }}" alt="{{ $produk->nama_produk }}" class="img-fluid img-thumbnail">
                         </a>
-                      </h3>
-                    <p class="harga"> <?php echo $produk->harga_jual; ?></p>
-                  </div>
-                  <div class="link-produk">
-                    <p>
-                      <input type="hidden" name="quantity" id="{{ $produk->id_produk }}" value="1" class="quantity">
-                      <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Detail</a>
-                        <!-- <a href="{{ asset('pemesanan?id_produk='.$produk->id_produk) }}" class="btn btn-info btn-sm">
-                          <i class="fa fa-shopping-cart"></i> Pesan Produk Ini
-                        </a> -->
-                    </p>
+                    </figure>
+                    <div class="keterangan">
+                        <h3>
+                            <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}">
+                                {{ $produk->nama_produk }}
+                            </a>
+                        </h3>
+                        <p class="harga">{{ $produk->harga_jual }}</p>
+                    </div>
+                    <!-- <div class="link-produk">
+                        <p>
+                            <input type="hidden" name="quantity" id="{{ $produk->id_produk }}" value="1" class="quantity">
+                            <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Detail</a>
+                        </p>
+                    </div> -->
                 </div>
             </div>
-            
-          <?php } ?>
-          <div class="clearfix"></div>
-            <div class="col-md-12">
-              
-               {{ $produks->links() }}
-              </div>
-        <?php }else{ ?>
-          <div class="col-md-12">
+        <?php endforeach; ?>
+        <div class="col-md-12">
+            {{ $produks->links() }}
+        </div>
+    <?php else: ?>
+        <div class="col-md-12">
             <p class="alert alert-info">Produk tidak ditemukan. Gunakan kata kunci pencarian yang berbeda.</p>
-          </div>
-          <?php } ?>
-      <hr>
-    </div>
+        </div>
+    <?php endif; ?>
+</div>
+
     
     <!-- END -->
   </div>

@@ -41,7 +41,7 @@ class Produk_model extends Model
             ->select('produk.*', 'kategori_produk.slug_kategori_produk', 'kategori_produk.nama_kategori_produk')
             ->where('status_produk','Publish')
             ->orderBy('id_produk','DESC')
-            ->paginate(9);
+            ->paginate(12);
         return $query;
     }
 
