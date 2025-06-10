@@ -10,6 +10,19 @@
               <hr>
             </div>
 
+            <style>
+              @media (max-width: 375px) {
+                .col-md-12 {
+                  text-align: left !important;
+                  padding-left: 15px;
+                  padding-right: 15px;
+                }
+                .col-md-12.text-center {
+                  text-align: center !important;
+                }
+              }
+            </style>
+
             <!-- Info Kantor + Google Map -->
             <div class="col-md-12">
               <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; justify-content: center;">
@@ -43,7 +56,7 @@
                 </div>
 
                 <!-- Google Map -->
-                <div style="width: auto;">
+                <!-- <div style="width: auto;">
                   <style type="text/css" media="screen">
                     iframe {
                       width: auto;
@@ -56,7 +69,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             
             <!-- Daftar Kantor Cabang -->

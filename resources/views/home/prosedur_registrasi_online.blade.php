@@ -12,6 +12,18 @@
               <hr>
             </div>
 
+            <style>
+              @media (max-width: 375px) {
+                .prosedur_regol {
+                  text-align: left !important;
+                  padding-left: 15px;
+                  padding-right: 15px;
+                  width: 100%;
+                  box-sizing: border-box;
+                }
+              }
+            </style>
+
                 <div class="prosedur_regol">
                     <ul style="list-style-type: square;">
                         <li>

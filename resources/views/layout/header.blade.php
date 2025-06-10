@@ -257,7 +257,6 @@ $nav_profil           = $myproduk->nav_profil();
                         <li><a href="{{ asset('wakil_pialang/prosedur_registrasi_online') }}">Prosedur Registrasi Online</a></li>
                         <li><a href="{{ asset('wakil_pialang/prosedur_penarikan') }}">Prosedur Penarikan</a></li>
                         <li><a href="{{ asset('wakil_pialang/petunjuk_transaksi') }}">Petunjuk Transaksi</a></li>
-                        <li><a href="https://www.rf-berjangka.com/images/content/spa_rfb_feb_2023_2.pdf">Specimen Agreement</a></li>
                      </ul>
                 </li>
                 <li class="drop-down"><a href="#">Informasi</a>

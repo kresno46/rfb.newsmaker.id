@@ -72,17 +72,49 @@
                     <div class="slider">
                       <div class="slide-track">
                         <div class="slide">
+                          <a href="https://bappebti.go.id/"><img src="{{ asset('public/upload/image/jfx-logo.png') }}" alt="JFX"></a>
+                        </div>
+                        <div class="slide">
+                          <a href="https://www.jfx.co.id/"><img src="{{ asset('public/upload/image/kbi-logo.png') }}" alt="KBI"></a>
+                        </div>
+                        <div class="slide">
+                          <a href="https://www.ptkbi.com/index.php/c_kbi_wppue_01_anggota_mitra#PL"><img src="{{ asset('public/upload/image/aspebtindo-logo.png') }}" alt="Aspebtindo"></a>
+                        </div>
+                        <div class="slide">
                           <a href="https://bappebti.go.id/"><img src="{{ asset('public/upload/image/bappebti-logo.png') }}" alt="Bappebti"></a>
-                        </div>
-                        <div class="slide">
-                          <a href="https://www.jfx.co.id/"><img src="{{ asset('public/upload/image/jfx-logo.png') }}" alt="JFX"></a>
-                        </div>
-                        <div class="slide">
-                          <a href="https://www.ptkbi.com/index.php/c_kbi_wppue_01_anggota_mitra#PL"><img src="{{ asset('public/upload/image/kbi-logo.png') }}" alt="KBI"></a>
                         </div>
                       </div>
                     </div>
                   </div>
+
+                  <style>
+                    .slider {
+                      height: 250px;
+                      margin: auto;
+                      position: relative;
+                      width: 90%;
+                      display: grid;
+                      place-items: center;
+                      overflow: hidden;
+                    }
+
+                    .slide-track {
+                      display: flex;
+                      width: 100%;
+                    }
+                    
+                    .slide {
+                      height: 200px;
+                      width: auto;
+                      display: flex;
+                      align-items: center;
+                      padding: 15px;
+                    }
+
+                    img {
+                      width: 100%;
+                    }
+                    </style>
 
               </div>
             </div>

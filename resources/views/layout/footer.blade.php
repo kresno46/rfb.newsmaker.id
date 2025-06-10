@@ -84,8 +84,8 @@ $site       = DB::table('konfigurasi')->first();
               <!-- <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('pembayaran') }}">Cara Pembayaran</a></li> -->
               <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('kontak') }}">Kontak</a></li>
               <br><br>
-              <h4 style="margin-bottom: 15px; color: #28a745; text-align: center;">
-                <strong>Download Aplikasi Pro Trader</strong>
+              <h4 style="margin-bottom: 15px; color:rgb(255, 255, 255); text-align: left;">
+                <h4>Download Aplikasi Pro Trader</h4>
               </h4>
               <li style="margin-top: 10px; text-align: center;">
                 <div>

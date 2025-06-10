@@ -27,6 +27,36 @@
       </div>
     </div>
   </div>
+
+  <style>
+    .hero-img img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .slideku {
+      text-align: center;
+      margin-top: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .slideku .text-center.text-lg-left {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .slideku .btn-get-started {
+      min-width: 140px;
+      text-align: center;
+    }
+
+  </style>
+
   <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
     <defs>
       <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
@@ -43,118 +73,6 @@
   </svg>
 </section>
 <!-- End Hero -->
-
-<!-- ======= Top Main Header Area =======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market Update</title>
-    <style>
-        /* CSS untuk market-update-container */
-        .market-update-container {
-            position: relative;
-            top: 0;
-            left: 0;
-            right: 0;
-            font-family: "Poppins", sans-serif;
-            background-color: #28a745;
-            box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
-        }
-
-        .market-update-container .title {
-            position: absolute;
-            background: red;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            padding: 0 24px;
-            color: white;
-            font-weight: bold;
-            z-index: 200;
-        }
-
-        .market-update-container ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            animation: scroll 35s infinite linear;
-        }
-
-        .market-update-container ul li {
-            white-space: nowrap;
-            padding: 10px 24px;
-            color: white;
-            position: relative;
-        }
-
-        .market-update-container ul li::after {
-            content:"";
-            width: 1px;
-            height: 100%;
-            background: white;
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-
-        .market-update-container ul li:last-child::after {
-            display: none;
-        }
-
-        @keyframes scroll {
-          from {
-              transform: translateX(100%);
-          }
-
-          to {
-              transform: translateX(-160%);
-          }
-        }
-    </style>
-</head>
-<body>
-    <div class="market-update-container">
-        <div class="title">
-            MARKET UPDATE
-        </div>
-        <ul>
-            <li>
-                Latest Quotes: GOLD: 3048.5 +1.8 (0.06%)
-            </li>
-
-            <li>
-                SILVER: 33.798 + 0.011 (0.03%)
-            </li>
-
-            <li>
-                HANGSENG: 24472 -262 (-1.07%)
-            </li>
-
-            <li>
-                NIKKEI 225: 37610 +100 (0.27%)
-            </li>
-
-            <li>
-                OIL: 71.16 +0.38 (0.54%)
-            </li>
-
-            <li>
-                EURUSD: 1.0908 +0.0007 (0.06%)
-            </li>
-
-            <li>
-                USDCHF: 0.8759 -0.0018 (-0.19%)
-            </li>
-
-            <li>
-                USD/IDR: 16464 -56 (-0.34%)
-            </li>
-        </ul>
-    </div>
-</body>
-</html> -->
 
  <!-- Start main -->
 <main id="main">
@@ -188,7 +106,7 @@
           <br><br>
     </div>
         <!-- START -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
+    <div class="row row-cols-3 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
     <?php if ($produks): ?>
         <?php foreach ($produks as $produk): ?>
             <div class="col mb-4">
@@ -396,6 +314,7 @@
 
 <hr>
 
+<div class="container">
 <div class="slider">
   
     <div class="slide-track">
@@ -416,6 +335,7 @@
     </div>
 
 </div>
+</div>
 
 <style>
   .slider {
@@ -430,103 +350,19 @@
 
   .slide-track {
     display: flex;
-    width: calc(250px * 4);
+    width: 100%;
   }
-
-  .slide-track {
-    display: flex;
-    width: calc(250px * 4);
-    /* animation: scroll 25s linear infinite; */
-  }
-
-  .slide-track:hover {
-    animation-play-state: paused;
-  } */
-
-  /* @keyframes scroll {
-    0% {
-        transform: translateX(300px);
-    }
-    100% {
-        transform: translateX(calc(-250px * 2));
-    }
-  }
-
-  /* @keyframes scroll {
-          from {
-              transform: translateX(100%);
-          }
-
-          to {
-              transform: translateX(-115%);
-          }
-        } */
-     
-     @keyframes scroll {
-          from {
-            transform: translateX(100%);
-          }
-
-          to {
-            transform: translateX(-115%);
-          }
-        }
-
+  
   .slide {
     height: 200px;
-    width: 250px;
+    width: auto;
     display: flex;
     align-items: center;
     padding: 15px;
-    perspective: 100px;
   }
 
   img {
     width: 100%;
-    transition: transform 1s;
-    
   }
 
-  .img:hover {
-    transform: translateZ(20px);
-  }
-
-  .slider::before,
-  .slider::after {
-    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-    content: '';
-    height: 100%;
-    position: absolute;
-    width: 15%;
-    z-index: 2;
-  }
-
-  .slider::before {
-    left: 0;
-    top: 0;
-  }
-
-  .slider::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-  }
 </style>
-
-<script>
-var owl = $('.owl-carousel');
-owl.owlCarousel({
-    items:1,
-    loop:true,
-    margin:10,
-    autoplay:true,
-    autoplayTimeout:5000,
-    autoplayHoverPause:true
-});
-$('.play').on('click',function(){
-    owl.trigger('play.owl.autoplay',[1000])
-})
-$('.stop').on('click',function(){
-    owl.trigger('stop.owl.autoplay')
-})
-</script>

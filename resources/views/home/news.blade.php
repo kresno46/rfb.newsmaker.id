@@ -12,7 +12,24 @@
               <hr>
             </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4 berita">
+            <style>
+              @media (max-width: 480px) {
+                .berita {
+                  width: 25% !important;
+                  float: left;
+                  padding: 0 8px;
+                  box-sizing: border-box;
+                }
+
+                .row::after {
+                  content: "";
+                  display: table;
+                  clear: both;
+                }
+              }
+            </style>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4 berita">
                   <figure class="thumnail">
                       <img src="\official\rfb-official\public\upload\image\gmbr_berita1.jpg" alt="" class="img-fluid img-thumbnail">
                   </figure>
@@ -34,7 +51,7 @@
                   </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4 berita">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4 berita">
                   <figure class="thumnail">
                       <img src="\official\rfb-official\public\upload\image\gmbr_berita2.jpg" alt="" class="img-fluid img-thumbnail">
                   </figure>
@@ -56,7 +73,7 @@
                   </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4 berita">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4 berita">
                   <figure class="thumnail">
                       <img src="\official\rfb-official\public\upload\image\gmbr_berita3.jpg" alt="" class="img-fluid img-thumbnail">
                   </figure>
@@ -72,6 +89,28 @@
                       <p>
                         <input type="hidden" name="quantity" id="" value="1" class="quantity">
                         <a href="{{ asset('wakil_pialang/berita1') }}" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
+                          
+                      </p>
+                  </div>
+                  </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4 berita">
+                  <figure class="thumnail">
+                      <img src="\official\rfb-official\public\upload\image\gmbr_berita4.jpg" alt="" class="img-fluid img-thumbnail">
+                  </figure>
+                  <p class="harga">05 JUNE 2025</p>
+                  <div class="keterangan">
+                      <h3>
+                        <a href="http://localhost/official/rfb-official/wakil_pialang/berita1">
+                          Canada Prepares Reprisals Over U.S. Metals Tariffs, EU Reports Progress In Talks
+                        </a>
+                      </h3>
+                    <p class="harga">Canada prepared possible reprisals while the European Union reported progress in trade talks on Wednesday as new U.S. metals tariffs triggered more disruption in the global economy....</p>
+                    <div class="link-berita">
+                      <p>
+                        <input type="hidden" name="quantity" id="" value="1" class="quantity">
+                        <a href="http://localhost/official/rfb-official/wakil_pialang/berita1" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
                           
                       </p>
                   </div>

@@ -23,6 +23,13 @@
                         color: #007bff;
                         text-decoration: underline;
                     }
+                    @media (max-width: 375px) {
+                      div[itemprop="articleBody"] {
+                        text-align: left !important;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                      }
+                    }
                 </style>
             </head>
 

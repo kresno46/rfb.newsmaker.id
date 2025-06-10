@@ -8,7 +8,7 @@
           <div class="row">
               
             <div class="col-md-12">
-              <h1 class="text-center">LATEST NEWS</h1>
+              <!-- <h1 class="text-center">LATEST NEWS</h1> -->
               <hr>
             </div>
 
@@ -104,6 +104,123 @@
                 </p>
 
                 <p><br>Source: Investing.com</p>
+
+                <p>
+                  <div class="row">
+              
+            <div class="col-md-12">
+              <h1 class="text-center">Berita Lainnya</h1>
+              <hr>
+            </div>
+
+            <style>
+              @media (max-width: 480px) {
+                .berita {
+                  width: 25% !important;
+                  float: left;
+                  padding: 0 8px;
+                  box-sizing: border-box;
+                }
+
+                .row::after {
+                  content: "";
+                  display: table;
+                  clear: both;
+                }
+              }
+            </style>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4 berita">
+                  <figure class="thumnail">
+                      <img src="\official\rfb-official\public\upload\image\gmbr_berita1.jpg" alt="" class="img-fluid img-thumbnail">
+                  </figure>
+                  <p class="harga">06 MAY 2025</p>
+                  <div class="keterangan">
+                      <h3>
+                        <a href="http://localhost/official/rfb-official/wakil_pialang/berita1">
+                          Trump orders 100% tariff on foreign...
+                        </a>
+                      </h3>
+                    <p class="harga">U.S. President Donald Trump on Sunday announced a...</p>
+                    <div class="link-berita">
+                      <p>
+                        <input type="hidden" name="quantity" id="" value="1" class="quantity">
+                        <a href="http://localhost/official/rfb-official/wakil_pialang/berita1" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
+                          
+                      </p>
+                  </div>
+                  </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4 berita">
+                  <figure class="thumnail">
+                      <img src="\official\rfb-official\public\upload\image\gmbr_berita2.jpg" alt="" class="img-fluid img-thumbnail">
+                  </figure>
+                  <p class="harga">06 MAY 2025</p>
+                  <div class="keterangan">
+                      <h3>
+                        <a href="http://localhost/official/rfb-official/wakil_pialang/berita1">
+                          Trump Blocks Harvard From New Research...
+                        </a>
+                      </h3>
+                    <p class="harga">The Trump administration has declared Harvard...</p>
+                    <div class="link-berita">
+                      <p>
+                        <input type="hidden" name="quantity" id="" value="1" class="quantity">
+                        <a href="http://localhost/official/rfb-official/wakil_pialang/berita1" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
+                          
+                      </p>
+                  </div>
+                  </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4 berita">
+                  <figure class="thumnail">
+                      <img src="\official\rfb-official\public\upload\image\gmbr_berita3.jpg" alt="" class="img-fluid img-thumbnail">
+                  </figure>
+                  <p class="harga">07 MAY 2025</p>
+                  <div class="keterangan">
+                      <h3>
+                        <a href="http://localhost/official/rfb-official/wakil_pialang/berita1">
+                          Trump in no rush for trade deals, wants...
+                        </a>
+                      </h3>
+                    <p class="harga">President Trump offered some fresh comments...</p>
+                    <div class="link-berita">
+                      <p>
+                        <input type="hidden" name="quantity" id="" value="1" class="quantity">
+                        <a href="http://localhost/official/rfb-official/wakil_pialang/berita1" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
+                          
+                      </p>
+                  </div>
+                  </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4 berita">
+                  <figure class="thumnail">
+                      <img src="\official\rfb-official\public\upload\image\gmbr_berita4.jpg" alt="" class="img-fluid img-thumbnail">
+                  </figure>
+                  <p class="harga">05 JUNE 2025</p>
+                  <div class="keterangan">
+                      <h3>
+                        <a href="http://localhost/official/rfb-official/wakil_pialang/berita1">
+                          Canada Prepares Reprisals Over...
+                        </a>
+                      </h3>
+                    <p class="harga">Canada prepared possible reprisals while the European...</p>
+                    <div class="link-berita">
+                      <p>
+                        <input type="hidden" name="quantity" id="" value="1" class="quantity">
+                        <a href="http://localhost/official/rfb-official/wakil_pialang/berita1" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
+                          
+                      </p>
+                  </div>
+                  </div>
+            </div>
+
+          </div>
+                </p>
+
                 </div>
 
                 <!-- Gambar Berita -->

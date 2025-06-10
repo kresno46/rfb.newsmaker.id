@@ -36,6 +36,24 @@
                 
             </div>
 
+            <style>
+              @media (max-width: 575.98px) {
+                .produk {
+                  margin-left: auto;
+                  margin-right: auto;
+                  text-align: center;
+                  display: block;
+                  float: none;
+                }
+                
+                .owl-carousel .item img {
+                  max-width: 85%;
+                  height: auto;
+                  margin: 0 auto;
+                }
+              }
+            </style>
+
             <div class="col-lg-8 col-md-7 col-sm-12 produk">
               
               <h1><?php echo $title ?></h1>
@@ -57,7 +75,8 @@
                 </div>
                 <!-- <hr> -->
                 <p><strong>Deskripsi:</strong>
-                  <br><?php echo nl2br($produk->deskripsi) ?></p>
+                  <!-- <br><?php echo nl2br($produk->deskripsi) ?> -->
+                </p>
                 <?php echo $produk->isi; ?>
             </div>
             <!-- <?php  if($produk_all) { ?>
