@@ -22,7 +22,7 @@ class Home extends Controller
         $news   = new Berita_model();
         $berita = $news->home();
 
-        $data = array(  'title'     => $site->namaweb.' - '.$site->tagline,
+        $data = array(  'title'     => 'PT Rifan Financindo Berjangka - Beranda',
                         'deskripsi' => $site->namaweb.' - '.$site->tagline,
                         'keywords'  => $site->namaweb.' - '.$site->tagline,
                         'slider'    => $slider,
@@ -41,12 +41,29 @@ class Home extends Controller
         $model  = new Produk_model();
         $produk = $model->listing();
 
-        $data = array(  'title'     => 'Kontak Kami: '.$site->namaweb.' - '.$site->tagline,
+        $data = array(  'title'     => 'Hubungi Kami: '.$site->namaweb,
                         'deskripsi' => 'Kontak '.$site->namaweb,
                         'keywords'  => 'Kontak '.$site->namaweb,
                         'site'      => $site,
                         'produk'    => $produk,
                         'content'   => 'home/kontak'
+                    );
+        return view('layout/wrapper',$data);
+    }
+
+    // wakil pialang
+    public function wakil_pialang()
+    {
+        $site   = DB::table('konfigurasi')->first();
+        $model  = new Produk_model();
+        $produk = $model->listing();
+
+        $data = array(  'title'     => 'PT Rifan Financindo Berjangka - Wakil Pialang Berjangka',
+                        'deskripsi' => 'Wakil Pialang Berjangka '.$site->namaweb,
+                        'keywords'  => 'Wakil Pialang Berjangka '.$site->namaweb,
+                        'site'      => $site,
+                        'produk'    => $produk,
+                        'content'   => 'home/wakil_pialang'
                     );
         return view('layout/wrapper',$data);
     }
@@ -160,6 +177,9 @@ class Home extends Controller
     {
         
     }
+
+    //VisiMisi
+    
 
     // konfirmasi
     public function konfirmasi()

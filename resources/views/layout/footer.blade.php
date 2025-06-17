@@ -61,13 +61,15 @@ $site       = DB::table('konfigurasi')->first();
 
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
-              <h3><?php echo $site->namaweb?></h3>
+              <!-- <h3><?php echo $site->namaweb?></h3> -->
+               <h3>PERHATIAN!</h3>
               <div class="pb-3">
                 <?php echo $site->deskripsi ?>
               </div>
               <div class="social-links mt-3">
-                <a href="<?php echo $site->facebook ?>" class="facebook"><i class="bx bxl-facebook"></i></a>
+                {{-- --}}
                 <a href="<?php echo $site->instagram ?>" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="<?php echo $site->facebook ?>" class="tiktok"><i class="bx bxl-tiktok"></i></a>
                 <a href="<?php echo $site->twitter ?>" class="google-plus"><i class="bx bxl-youtube"></i></a>
               </div>
             </div>
@@ -78,23 +80,56 @@ $site       = DB::table('konfigurasi')->first();
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('/') }}">Beranda</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('produk') }}">Lihat Produk</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('pemesanan') }}">Pemesanan Produk</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('pembayaran') }}">Cara Pembayaran</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('pemesanan') }}">Pemesanan Produk</a></li> -->
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('pembayaran') }}">Cara Pembayaran</a></li> -->
               <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('kontak') }}">Kontak</a></li>
+              <br><br>
+              <h4 style="margin-bottom: 15px; color:rgb(255, 255, 255); text-align: left;">
+                <h4>Download Aplikasi Pro Trader</h4>
+              </h4>
+              <li style="margin-top: 10px; text-align: center;">
+                <div>
+                  <a href="https://apps.apple.com/id/app/pro-trader-royalassetindo/id6502900138?l=id" target="_blank" class="download-btn">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height: 45px; width: 155px;">
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.royalassetindo.protrader&hl=en&pli=1" target="_blank" class="download-btn">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height: 65px; width: 155px ;">
+                  </a>
+                </div>
+                <style>
+                  .download-btn:hover img {
+                    transform: scale(1.05);
+                  }
+                  @keyframes pulse {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.05); }
+                    100% { transform: scale(1); }
+                  }
+                </style>
+              </li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Pemesanan</h4>
+            <!-- <h4>Pemesanan</h4> -->
             <p>
               <strong><?php echo strtoupper($site->namaweb) ?></strong>
               <br><?php echo nl2br($site->alamat) ?>
               <br>Email: <?php echo $site->email ?>
               <br>Telepon: <?php echo $site->telepon ?>
               <br>HP <i class="fab fa-whatsapp"></i>: <?php echo $site->hp ?>
-              <br>Website: <?php echo $site->website ?>
+              <br>Layanan pengaduan: <?php echo $site->email ?>
             </p>
-
+            <br>
+            <p>
+              <strong>Support by PROTRADER</strong>
+            </p>
+              <div style="display: flex; align-items: center; gap: 20px;">
+                <img src="{{ asset('public/upload/image/qr.png') }}" style="height: 125px; width: auto;" alt="QR Code">
+                   <a href="https://demo.rifanberjangka.com/login" target="_blank">
+                  <img src="{{ asset('public/upload/image/LOGO PROTRADER Copy.png') }}" style="height: auto; width: 175px;" alt="Logo">
+                </a>
+              </div>
           </div>
 
         </div>
@@ -103,11 +138,11 @@ $site       = DB::table('konfigurasi')->first();
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span><?php echo $site->namaweb ?></span></strong>. All Rights Reserved
+        &copy; Copyright 2025, <strong><span><?php echo $site->namaweb ?></span></strong>. All Rights Reserved
       </div>
-      <div class="credits">
+      <!-- <div class="credits">
         Developed by <a href="https://javawebmedia.com/">Java Web Media</a>
-      </div>
+      </div> -->
     </div>
   </footer><!-- End Footer -->
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>

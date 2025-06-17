@@ -10,7 +10,7 @@ $site = DB::table('konfigurasi')->first();
     <meta name="keywords" content="{{ $keywords }}">
     <meta name="author" content="{{ $site->namaweb }}">
     <!-- icon -->
-    <!-- <link rel="shortcut icon" href="{{ asset('public/upload/image/'.$site->icon) }}"> -->
+    <link rel="shortcut icon" href="{{ asset('/public/upload/image/rfb_logoo.png') }}">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <!-- Custom fonts for this template -->
@@ -22,7 +22,8 @@ $site = DB::table('konfigurasi')->first();
     <link href="{{ asset('public/assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
     <link href="{{ asset('public/template/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('public/template/assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/template/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('public/template/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Template Main CSS File -->
     <link href="{{ asset('public/template/assets/css/style.css') }}" rel="stylesheet">
     <script src="{{ asset('public/admin/vendor/jquery/jquery.min.js') }}"></script>
@@ -36,6 +37,61 @@ $site = DB::table('konfigurasi')->first();
     <!-- sweetalert -->
     <script src="{{ asset('public/sweetalert/js/sweetalert.min.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('public/sweetalert/css/sweetalert.css') }}">
+    
+    <!-- World Time Script -->
+    <script>
+        function updateWorldTime() {
+            const timeOptions = { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                hour12: false
+            };
+
+            const dateOptions = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
+
+            // Current date in Indonesian
+            const now = new Date();
+            const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+            const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+            
+            const dayName = days[now.getDay()];
+            const date = now.getDate();
+            const monthName = months[now.getMonth()];
+            const year = now.getFullYear();
+            
+            document.getElementById('current-date').textContent = `${dayName}, ${date} ${monthName} ${year}`;
+
+            // Get current UTC time
+            const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+
+            // Jakarta (WIB/UTC+7)
+            const jakartaTime = new Date(utc + (7 * 3600000));
+            document.getElementById('jakarta-time').textContent = jakartaTime.toLocaleTimeString('en-US', timeOptions);
+
+            // Tokyo (JST/UTC+9)
+            const tokyoTime = new Date(utc + (9 * 3600000));
+            document.getElementById('tokyo-time').textContent = tokyoTime.toLocaleTimeString('en-US', timeOptions);
+
+            // Hong Kong (HKT/UTC+8)
+            const hongkongTime = new Date(utc + (8 * 3600000));
+            document.getElementById('hongkong-time').textContent = hongkongTime.toLocaleTimeString('en-US', timeOptions);
+
+            // New York (EST/UTC-5 or EDT/UTC-4)
+            const nyTime = new Date(utc - (4 * 3600000));
+            document.getElementById('newyork-time').textContent = nyTime.toLocaleTimeString('en-US', timeOptions);
+        }
+
+        // Update time every second
+        setInterval(updateWorldTime, 1000);
+        
+        // Initial update
+        document.addEventListener('DOMContentLoaded', updateWorldTime);
+    </script>
     <style type="text/css" media="screen">
       a.orange {
         color: #FFF;
@@ -117,8 +173,111 @@ $site = DB::table('konfigurasi')->first();
     .galeri {
       margin-bottom: 30px;
     }
+    /* Popup styles */
+    .popup-overlay {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 9999;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+    .popup-overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    .popup-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -70%);
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      width: 90%;
+      z-index: 10000;
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      cursor: default;
+    }
+    .popup-overlay.show .popup-container {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 24px;
+      color: #666;
+    }
+    .popup-content {
+      text-align: center;
+    }
+    .popup-content img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
     </style>
 <?php echo $site->metatext; ?>
+    
+    @if(request()->is('/') || request()->is('home'))
+    <!-- Popup HTML -->
+    <div class="popup-overlay" id="adPopup">
+      <div class="popup-container">
+        <div class="popup-close" onclick="closePopup()">&times;</div>
+        <div class="popup-content">
+          <img src="{{ asset('public/upload/image/rfb_logoo.png') }}" alt="Advertisement">
+          <h3>Welcome to {{ $site->namaweb }}</h3>
+          <p>Join us now and start your trading journey!</p>
+          <a href="https://regol.rifan-financindo-berjangka.co.id/" class="btn btn-success">Register Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup Script -->
+    <script>
+      function showPopup() {
+        document.getElementById('adPopup').classList.add('show');
+      }
+      
+      function closePopup() {
+        document.getElementById('adPopup').classList.remove('show');
+      }
+      
+      // Show popup when page loads with a nice fade effect
+      window.addEventListener('load', function() {
+        setTimeout(showPopup, 1500); // Increased delay for better user experience
+      });
+
+      // Close popup when clicking outside
+      document.addEventListener('DOMContentLoaded', function() {
+        const popup = document.getElementById('adPopup');
+        const container = popup.querySelector('.popup-container');
+        
+        popup.addEventListener('click', function(e) {
+          // Close only if clicking outside the container
+          if (e.target === popup) {
+            closePopup();
+          }
+        });
+
+        // Prevent clicks inside the container from closing the popup
+        container.addEventListener('click', function(e) {
+          e.stopPropagation();
+        });
+      });
+    </script>
+    @endif
 </head>
 
 <body>

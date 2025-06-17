@@ -55,13 +55,13 @@ $site                 = DB::table('konfigurasi')->first();
       </li>
 
       <!-- TRANSAKSI -->
-      <hr class="sidebar-divider">
+      <!-- <hr class="sidebar-divider">
       <div class="sidebar-heading">Order &amp; Pemesanan</div>
       <hr class="sidebar-divider">
       <li class="nav-item">
         <a class="nav-link" href="{{ asset('admin/pemesanan') }}">
           <i class="fas fa-fw fa-money-bill-alt"></i> <span>Pemesanan</span></a>
-      </li>
+      </li> -->
       <!-- PRODUK -->
       <hr class="sidebar-divider">
       <div class="sidebar-heading">Produk &amp; Layanan</div>
@@ -78,7 +78,7 @@ $site                 = DB::table('konfigurasi')->first();
         <a class="nav-link" href="{{ asset('admin/kategori_produk') }}">
           <i class="fas fa-fw fa-tags"></i> <span>Kategori Produk</span></a>
       </li>
-     
+
       <!-- Divider -->
       <hr class="sidebar-divider">
       <div class="sidebar-heading">Konten Website</div>
@@ -156,8 +156,8 @@ $site                 = DB::table('konfigurasi')->first();
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
       <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
+      <!-- <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
+      </div> -->
     </ul>
     <!-- End of Sidebar -->

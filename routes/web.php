@@ -1,5 +1,8 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WakilPialang;
+use App\Http\Controllers\Admin\KategoriWakilPialang;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +24,36 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'Home@index');
 Route::get('home', 'Home@index');
 Route::get('kontak', 'Home@kontak');
+Route::get('wakil_pialang', 'Home@wakil_pialang');
 Route::get('pemesanan', 'Home@pemesanan');
 Route::get('konfirmasi', 'Home@konfirmasi');
 Route::get('pembayaran', 'Home@pembayaran');
 Route::post('proses_pemesanan', 'Home@proses_pemesanan');
 Route::get('berhasil/{par1}', 'Home@berhasil');
 Route::get('cetak/{par1}', 'Home@cetak');
+// Wakil Pialang
+Route::get('wakil_pialang/axa_tower_jakarta', 'WakilPialang@axa_tower_jakarta');
+Route::get('wakil_pialang/medan', 'WakilPialang@medan');
+Route::get('wakil_pialang/solo', 'WakilPialang@solo');
+Route::get('wakil_pialang/balikpapan', 'WakilPialang@balikpapan');
+Route::get('wakil_pialang/palembang', 'WakilPialang@palembang');
+Route::get('wakil_pialang/surabaya_ciputra', 'WakilPialang@surabaya_ciputra');
+Route::get('wakil_pialang/bandung', 'WakilPialang@bandung');
+Route::get('wakil_pialang/pekanbaru', 'WakilPialang@pekanbaru');
+Route::get('wakil_pialang/surabaya_pakuwon', 'WakilPialang@surabaya_pakuwon');
+Route::get('wakil_pialang/dbs_tower_jakarta', 'WakilPialang@dbs_tower_jakarta');
+Route::get('wakil_pialang/semarang', 'WakilPialang@semarang');
+Route::get('wakil_pialang/yogyakarta', 'WakilPialang@yogyakarta');
+Route::get('wakil_pialang/news', 'WakilPialang@news');
+Route::get('wakil_pialang/berita1', 'WakilPialang@berita1');
+Route::get('wakil_pialang/economic_calendar', 'WakilPialang@economic_calendar');
+Route::get('wakil_pialang/historical_data', 'WakilPialang@historical_data');
+Route::get('wakil_pialang/pivot', 'WakilPialang@pivot');
+Route::get('wakil_pialang/fibonacci', 'WakilPialang@fibonacci');
+Route::get('wakil_pialang/legalitasbisnis', 'WakilPialang@legalitasbisnis');
+Route::get('wakil_pialang/prosedur_registrasi_online', 'WakilPialang@prosedur_registrasi_online');
+Route::get('wakil_pialang/prosedur_penarikan', 'WakilPialang@prosedur_penarikan');
+Route::get('wakil_pialang/petunjuk_transaksi', 'WakilPialang@petunjuk_transaksi');
 // Login
 Route::get('login', 'Login@index');
 Route::post('login/cek', 'Login@cek');
@@ -49,6 +76,8 @@ Route::get('produk', 'Produk@index');
 Route::get('produk/kategori/{par1}', 'Produk@kategori');
 Route::get('produk/detail/{par1}', 'Produk@detail');
 Route::get('produk/cetak/{par1}', 'Produk@cetak');
+// Visi-misi
+Route::get('visi-misi', 'VisiMisi@index');
 /* END FRONT END */
 /* BACK END */
 Route::group(['namespace' => 'Admin'], 
@@ -144,7 +173,7 @@ function()
     Route::get('admin/produk/tambah', 'Produk@tambah');
     Route::get('admin/produk/edit/{par1}', 'Produk@edit');
     Route::get('admin/produk/delete/{par1}', 'Produk@delete');
-    Route::post('admin/produk/tambah_proses', 'Produk@tambah_proses');
+    Route::post('admin/produk/tambah_proses', 'Produk@tambah_proses'); 
     Route::post('admin/produk/edit_proses', 'Produk@edit_proses');
     Route::post('admin/produk/proses', 'Produk@proses');
     // galeri
@@ -175,3 +204,8 @@ function()
 
 
 
+    // localization
+    Route::get('locale/{locale}',function($locale){
+        Session::put('locale',$locale);
+        return redirect()->back();
+    }   );

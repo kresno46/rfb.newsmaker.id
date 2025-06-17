@@ -26,7 +26,7 @@
 	              <br>Email: <?php echo $site->email ?>
 	              <br>Telepon: <?php echo $site->telepon ?>
 	              <br>HP <i class="fab fa-whatsapp"></i>: <?php echo $site->hp ?>
-	              <br>Website: <?php echo $site->website ?>
+	              <br>Layanan pengaduan: <?php echo $site->email ?>
 			</td>
 			<td>
 				<strong><?php echo strtoupper($pemesanan->nama_pemesan) ?></strong>

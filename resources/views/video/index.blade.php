@@ -8,11 +8,11 @@
             <div class="col-md-12 text-center">
               <h1><?php echo $title ?></h1>
               <hr>
+              <br>
             </div>
 
-            
               <?php foreach($videos as $video) { ?>
-          <div class="col-lg-6 col-md-6 galeri">
+          <div class="col-lg-9 col-md-6 galeri mx-auto">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
               <div class="pic">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -28,7 +28,6 @@
           <?php } ?>
 
           <div class="col-md-12">
-            <br><br>
             <hr>
                 <p class="text-center">
                   {{ $videos->links() }}

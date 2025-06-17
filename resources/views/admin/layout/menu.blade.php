@@ -46,11 +46,11 @@ $nav_pemesanan        = DB::table('pemesanan')
 
         <!-- Nav Item - Messages -->
         <li class="nav-item dropdown no-arrow mx-1">
-          <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-shopping-cart fa-fw"></i> Order Baru
+          <!-- <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-shopping-cart fa-fw"></i> Order Baru -->
             <!-- Counter - Messages -->
-                          <span class="badge badge-danger badge-counter"><?php if($nav_pemesanan) { echo count($nav_pemesanan); }else{ echo 0; } ?></span>
-                      </a>
+                          <!-- <span class="badge badge-danger badge-counter"><?php if($nav_pemesanan) { echo count($nav_pemesanan); }else{ echo 0; } ?></span>
+                      </a> -->
           <!-- Dropdown - Messages -->
           <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
             <h6 class="dropdown-header">
