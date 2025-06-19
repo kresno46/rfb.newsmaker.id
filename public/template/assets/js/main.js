@@ -63,7 +63,11 @@
       class: 'mobile-nav d-lg-none'
     });
     $('body').append($mobile_nav);
-    $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
+  if (window.innerWidth <= 500) {
+    $mobile_nav.css('font-size', '25px');
+    $mobile_nav.find('a').css('font-size', '25px'); 
+  }
+    $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu" style="font-size:32px;"></i></button>');
     $('body').append('<div class="mobile-nav-overly"></div>');
 
     $(document).on('click', '.mobile-nav-toggle', function(e) {
