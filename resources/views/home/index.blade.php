@@ -24,6 +24,38 @@
             </div>
           </div>
           <?php } ?>
+
+          <!-- {{-- Slide tambahan dengan background perhatian.jpg --}} -->
+        <div class="item" style="background: url('{{ asset('public/upload/image/perhatian.jpeg') }}') center center / cover no-repeat; color: white;">
+          <div class="row" style="min-height: 500px; display: flex; flex-direction: column; justify-content: flex-start; padding: 60px 30px;">
+
+            <!-- {{-- Konten tambahan bisa ditaruh di bawah sini --}} -->
+            <div class="col-lg-12 text-center mt-auto">
+            <!-- {{-- Anda bisa menambahkan tombol atau keterangan lain di sini --}} -->
+            </div>
+
+          </div>
+        </div>
+
+        <style>
+          .item {
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 100%;
+            min-height: 500px;
+          }
+
+          @media (max-width: 768px) {
+            .item {
+              background-size: cover;
+              background-position: center center;
+              min-height: 400px; 
+              padding: 30px 15px;
+            }
+          }
+        </style>
+
       </div>
     </div>
   </div>
@@ -54,7 +86,6 @@
       min-width: 140px;
       text-align: center;
     }
-
   </style>
 
   <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">

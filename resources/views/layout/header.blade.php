@@ -225,6 +225,19 @@ $nav_profil           = $myproduk->nav_profil();
             </span></a></h1>
         </div>
 
+        <style>
+            @media only screen and (max-width: 400px) {
+                .world-time {
+                    font-size: 16px; 
+                }
+
+                .world-time .label {
+                    font-weight: bold;
+                    font-size: 17px; 
+                }
+            }
+        </style>
+
         <nav class="nav-menu d-none d-lg-block">
             <ul>
                 <li class=""><a href="{{ asset('/') }}">Beranda</a></li>
@@ -314,6 +327,16 @@ $nav_profil           = $myproduk->nav_profil();
         </div>
     </div>
 </div>
+
+<style>
+    @media screen and (max-width: 500px) {
+    .language-selector .dropbtn {
+        left: -70px;
+        position: relative; /* pastikan ada posisi */
+    }
+}
+
+</style>
 
 <!-- Google Translate Element -->
 <div id="google_element" style="display:none;"></div>
